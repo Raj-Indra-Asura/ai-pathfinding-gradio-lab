@@ -1,4 +1,8 @@
-# Week 5 Exercises: A* Search Algorithm
+# Week 5: Exercises
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 4 Exercises](week_04.md)** | **📚 [Week 5 Documentation](../docs/week_05_astar.md)** | **✅ [Week 5 Solutions](../solutions/week_05_solutions.md)** | **➡️ [Next: Week 6 Exercises](week_06.md)**
+
+---
 
 ## Overview
 
@@ -415,4 +419,6 @@ Analyze which heuristics work best on different grid patterns and create a class
 
 ---
 
-**See solutions/week_05_solutions.md for answers**
+---
+
+**✅ [See Solutions](../solutions/week_05_solutions.md)** | **📚 [Back to Week 5 Docs](../docs/week_05_astar.md)** | **➡️ [Next: Week 6 Exercises](week_06.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

@@ -1,4 +1,8 @@
-# Week 5 Solutions: A* Search Algorithm
+# Week 5: Solutions
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 4 Solutions](week_04_solutions.md)** | **📚 [Week 5 Documentation](../docs/week_05_astar.md)** | **📝 [Week 5 Exercises](../exercises/week_05.md)** | **➡️ [Next: Week 6 Solutions](week_06_solutions.md)**
+
+---
 
 ## Exercise 1: Custom Heuristic Evaluator (Beginner)
 
@@ -693,3 +697,7 @@ def ida_star(grid, start, goal, heuristic):
 ---
 
 **Next: Continue to Week 6 - Heuristic Functions →**
+
+---
+
+**📝 [Back to Week 5 Exercises](../exercises/week_05.md)** | **📚 [Week 5 Documentation](../docs/week_05_astar.md)** | **➡️ [Next: Week 6 Solutions](week_06_solutions.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

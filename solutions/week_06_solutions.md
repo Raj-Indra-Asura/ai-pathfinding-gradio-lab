@@ -1,4 +1,8 @@
-# Week 6: Heuristic Functions - Solutions
+# Week 6: Solutions
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 5 Solutions](week_05_solutions.md)** | **📚 [Week 6 Documentation](../docs/week_06_heuristics.md)** | **📝 [Week 6 Exercises](../exercises/week_06.md)** | **➡️ [Next: Week 7 Solutions](week_07_solutions.md)**
+
+---
 
 ## Beginner Exercise Solution: Distance Metric Calculator
 
@@ -741,3 +745,7 @@ assert fixed_chebyshev((0, 0), (5, 5)) == 5.0  # Diagonal = max dimension
 ---
 
 **Next: Week 7 Visualization Techniques →**
+
+---
+
+**📝 [Back to Week 6 Exercises](../exercises/week_06.md)** | **📚 [Week 6 Documentation](../docs/week_06_heuristics.md)** | **➡️ [Next: Week 7 Solutions](week_07_solutions.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

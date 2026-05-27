@@ -1,4 +1,8 @@
-# Week 4 Exercises: Dijkstra's Algorithm
+# Week 4: Exercises
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 3 Exercises](week_03.md)** | **📚 [Week 4 Documentation](../docs/week_04_dijkstra.md)** | **✅ [Week 4 Solutions](../solutions/week_04_solutions.md)** | **➡️ [Next: Week 5 Exercises](week_05.md)**
+
+---
 
 ## Overview
 
@@ -347,4 +351,6 @@ Create a visualization showing how the "frontier" of explored costs expands from
 
 ---
 
-**See solutions/week_04_solutions.md for answers**
+---
+
+**✅ [See Solutions](../solutions/week_04_solutions.md)** | **📚 [Back to Week 4 Docs](../docs/week_04_dijkstra.md)** | **➡️ [Next: Week 5 Exercises](week_05.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

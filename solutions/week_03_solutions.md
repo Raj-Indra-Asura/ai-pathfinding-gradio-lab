@@ -1,4 +1,8 @@
-# Week 3 Solutions: BFS and DFS
+# Week 3: Solutions
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 2 Solutions](week_02_solutions.md)** | **📚 [Week 3 Documentation](../docs/week_03_bfs_dfs.md)** | **📝 [Week 3 Exercises](../exercises/week_03.md)** | **➡️ [Next: Week 4 Solutions](week_04_solutions.md)**
+
+---
 
 ## Exercise 1: BFS Step Counter (Beginner)
 
@@ -615,3 +619,7 @@ print(f"Bidirectional BFS: path={len(bi_path) if bi_path else 'N/A'}, visited={b
 ---
 
 **Next: Continue to Week 4 - Dijkstra's Algorithm →**
+
+---
+
+**📝 [Back to Week 3 Exercises](../exercises/week_03.md)** | **📚 [Week 3 Documentation](../docs/week_03_bfs_dfs.md)** | **➡️ [Next: Week 4 Solutions](week_04_solutions.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

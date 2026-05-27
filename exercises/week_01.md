@@ -1,5 +1,9 @@
 # Week 1: Exercises
 
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **📚 [Week 1 Documentation](../docs/week_01_python_project_setup.md)** | **✅ [Week 1 Solutions](../solutions/week_01_solutions.md)** | **➡️ [Next: Week 2 Exercises](week_02.md)**
+
+---
+
 ## Beginner Exercise
 
 ### Task
@@ -61,4 +65,4 @@
 
 ---
 
-**See solutions/week_01_solutions.md for answers**
+**✅ [See Solutions](../solutions/week_01_solutions.md)** | **📚 [Back to Week 1 Docs](../docs/week_01_python_project_setup.md)** | **➡️ [Next: Week 2 Exercises](week_02.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

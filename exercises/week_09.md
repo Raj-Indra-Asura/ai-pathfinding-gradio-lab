@@ -1,4 +1,8 @@
-# Week 9 Exercises: Benchmarking and Performance Analysis
+# Week 9: Exercises
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 8 Exercises](week_08.md)** | **📚 [Week 9 Documentation](../docs/week_09_benchmarking.md)** | **✅ [Week 9 Solutions](../solutions/week_09_solutions.md)** | **➡️ [Next: Week 10 Exercises](week_10.md)**
+
+---
 
 ## Exercise 1: Basic Algorithm Benchmarking (Beginner)
 
@@ -648,4 +652,6 @@ For each exercise, ensure:
 
 ---
 
-**See solutions/week_09_solutions.md for answers**
+---
+
+**✅ [See Solutions](../solutions/week_09_solutions.md)** | **📚 [Back to Week 9 Docs](../docs/week_09_benchmarking.md)** | **➡️ [Next: Week 10 Exercises](week_10.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

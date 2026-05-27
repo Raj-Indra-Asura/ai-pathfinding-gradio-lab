@@ -1,16 +1,22 @@
 # AI Pathfinding Lab - Jupyter Notebooks
 
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **📚 [Main README](../README.md)**
+
+---
+
 This directory contains interactive Jupyter notebooks for learning pathfinding algorithms.
 
-## Notebooks Overview
+## 📚 Notebooks Overview
 
-### 01_grid_basics.ipynb (converted from .md)
+### [01_grid_basics.ipynb](01_grid_basics.ipynb)
+**Related to**: [Week 2 - Grid Model](../docs/week_02_grid_model.md)
 - **Topics**: Grid creation, obstacles, neighbors, coordinate systems
 - **Level**: Beginner
 - **Duration**: 30 minutes
 - **Prerequisites**: None
 
-### 02_bfs_dfs.ipynb
+### [02_bfs_dfs.ipynb](02_bfs_dfs.ipynb)
+**Related to**: [Week 3 - BFS and DFS](../docs/week_03_bfs_dfs.md)
 - **Topics**: Breadth-First Search and Depth-First Search
 - **Level**: Beginner
 - **Duration**: 45-60 minutes
@@ -21,7 +27,8 @@ This directory contains interactive Jupyter notebooks for learning pathfinding a
   - Queue vs Stack data structures
   - Performance comparison on various grids
 
-### 03_dijkstra_astar.ipynb
+### [03_dijkstra_astar.ipynb](03_dijkstra_astar.ipynb)
+**Related to**: [Week 4 - Dijkstra](../docs/week_04_dijkstra.md) & [Week 5 - A*](../docs/week_05_astar.md)
 - **Topics**: Dijkstra's Algorithm and A* Search
 - **Level**: Intermediate
 - **Duration**: 60-75 minutes
@@ -33,7 +40,8 @@ This directory contains interactive Jupyter notebooks for learning pathfinding a
   - Admissible heuristics
   - Performance benchmarking
 
-### 04_heuristics.ipynb
+### [04_heuristics.ipynb](04_heuristics.ipynb)
+**Related to**: [Week 6 - Heuristics](../docs/week_06_heuristics.md)
 - **Topics**: Comprehensive heuristic function analysis
 - **Level**: Intermediate
 - **Duration**: 60-90 minutes
@@ -45,7 +53,8 @@ This directory contains interactive Jupyter notebooks for learning pathfinding a
   - Heuristic selection guide
   - Performance trade-offs
 
-### 05_algorithm_comparison.ipynb
+### [05_algorithm_comparison.ipynb](05_algorithm_comparison.ipynb)
+**Related to**: [Week 9 - Benchmarking](../docs/week_09_benchmarking.md)
 - **Topics**: Benchmarking all algorithms
 - **Level**: Advanced
 - **Duration**: 75-90 minutes
@@ -57,7 +66,8 @@ This directory contains interactive Jupyter notebooks for learning pathfinding a
   - Scenario-based recommendations
   - Decision guide for algorithm selection
 
-### 06_learned_heuristics.ipynb
+### [06_learned_heuristics.ipynb](06_learned_heuristics.ipynb)
+**Related to**: [Week 10 - ML Heuristics](../docs/week_10_ml_heuristic.md)
 - **Topics**: Machine learning-based heuristics
 - **Level**: Advanced
 - **Duration**: 90-120 minutes
@@ -152,3 +162,7 @@ Found an issue or have suggestions? Please open an issue on the repository!
 ## License
 
 Part of the AI Pathfinding Gradio Lab project.
+
+---
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **📚 [Main README](../README.md)** | **🚀 [Week 1: Get Started](../docs/week_01_python_project_setup.md)**

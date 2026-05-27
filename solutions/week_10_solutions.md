@@ -1,4 +1,8 @@
-# Week 10 Solutions: ML-Based Heuristics
+# Week 10: Solutions
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 9 Solutions](week_09_solutions.md)** | **📚 [Week 10 Documentation](../docs/week_10_ml_heuristic.md)** | **📝 [Week 10 Exercises](../exercises/week_10.md)** | **➡️ [Next: Week 11 Solutions](week_11_solutions.md)**
+
+---
 
 ## Exercise 1 Solution: Generate Training Data (Beginner)
 
@@ -1865,3 +1869,7 @@ This week, you learned:
 ---
 
 **End of Week 10 Solutions**
+
+---
+
+**📝 [Back to Week 10 Exercises](../exercises/week_10.md)** | **📚 [Week 10 Documentation](../docs/week_10_ml_heuristic.md)** | **➡️ [Next: Week 11 Solutions](week_11_solutions.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

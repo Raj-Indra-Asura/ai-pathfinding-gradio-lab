@@ -1,4 +1,8 @@
-# Week 7: Visualization - Solutions
+# Week 7: Solutions
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 6 Solutions](week_06_solutions.md)** | **📚 [Week 7 Documentation](../docs/week_07_visualization.md)** | **📝 [Week 7 Exercises](../exercises/week_07.md)** | **➡️ [Next: Week 8 Solutions](week_08_solutions.md)**
+
+---
 
 ## Beginner Exercise Solution: Custom Color Scheme Visualizer
 
@@ -751,3 +755,7 @@ See the corrected code structure provided in the exercise. All bugs are fixed by
 ---
 
 **Next: Week 8 Gradio UI →**
+
+---
+
+**📝 [Back to Week 7 Exercises](../exercises/week_07.md)** | **📚 [Week 7 Documentation](../docs/week_07_visualization.md)** | **➡️ [Next: Week 8 Solutions](week_08_solutions.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

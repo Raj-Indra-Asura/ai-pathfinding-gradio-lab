@@ -1,4 +1,8 @@
-# Week 3 Exercises: BFS and DFS
+# Week 3: Exercises
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 2 Exercises](week_02.md)** | **📚 [Week 3 Documentation](../docs/week_03_bfs_dfs.md)** | **✅ [Week 3 Solutions](../solutions/week_03_solutions.md)** | **➡️ [Next: Week 4 Exercises](week_04.md)**
+
+---
 
 ## Overview
 
@@ -346,4 +350,6 @@ Create a tool that runs BFS and DFS on 100 random grids and compares:
 
 ---
 
-**See solutions/week_03_solutions.md for answers**
+---
+
+**✅ [See Solutions](../solutions/week_03_solutions.md)** | **📚 [Back to Week 3 Docs](../docs/week_03_bfs_dfs.md)** | **➡️ [Next: Week 4 Exercises](week_04.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**
