@@ -1,4 +1,8 @@
-# Week 11: Testing, Documentation, and Polishing
+# Week 11: Exercises
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 10 Exercises](week_10.md)** | **📚 [Week 11 Documentation](../docs/week_11_polishing.md)** | **✅ [Week 11 Solutions](../solutions/week_11_solutions.md)** | **➡️ [Next: Week 12 Exercises](week_12.md)**
+
+---
 
 This week focuses on professional software development practices: writing comprehensive tests, documenting code properly, and using quality assurance tools.
 
@@ -699,3 +703,7 @@ In this week, you practiced professional software engineering skills:
 These skills are essential for maintaining large, professional codebases.
 
 **See solutions/week_11_solutions.md for detailed solutions**
+
+---
+
+**✅ [See Solutions](../solutions/week_11_solutions.md)** | **📚 [Back to Week 11 Docs](../docs/week_11_polishing.md)** | **➡️ [Next: Week 12 Exercises](week_12.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

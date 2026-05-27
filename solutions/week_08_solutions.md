@@ -1,4 +1,8 @@
-# Week 8 Solutions: Building Interactive UIs with Gradio
+# Week 8: Solutions
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 7 Solutions](week_07_solutions.md)** | **📚 [Week 8 Documentation](../docs/week_08_gradio_ui.md)** | **📝 [Week 8 Exercises](../exercises/week_08.md)** | **➡️ [Next: Week 9 Solutions](week_09_solutions.md)**
+
+---
 
 ## Exercise 1 Solution: Basic Gradio Interface (Beginner)
 
@@ -1020,3 +1024,7 @@ Key takeaways:
 ---
 
 **Continue to Week 9: Benchmarking →**
+
+---
+
+**📝 [Back to Week 8 Exercises](../exercises/week_08.md)** | **📚 [Week 8 Documentation](../docs/week_08_gradio_ui.md)** | **➡️ [Next: Week 9 Solutions](week_09_solutions.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

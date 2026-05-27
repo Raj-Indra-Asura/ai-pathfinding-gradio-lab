@@ -1,4 +1,8 @@
-# Week 9 Solutions: Benchmarking and Performance Analysis
+# Week 9: Solutions
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 8 Solutions](week_08_solutions.md)** | **📚 [Week 9 Documentation](../docs/week_09_benchmarking.md)** | **📝 [Week 9 Exercises](../exercises/week_09.md)** | **➡️ [Next: Week 10 Solutions](week_10_solutions.md)**
+
+---
 
 ## Exercise 1 Solution: Basic Algorithm Benchmarking (Beginner)
 
@@ -1305,3 +1309,7 @@ These skills are essential for:
 ---
 
 **Continue to Week 10: ML Heuristics →**
+
+---
+
+**📝 [Back to Week 9 Exercises](../exercises/week_09.md)** | **📚 [Week 9 Documentation](../docs/week_09_benchmarking.md)** | **➡️ [Next: Week 10 Solutions](week_10_solutions.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

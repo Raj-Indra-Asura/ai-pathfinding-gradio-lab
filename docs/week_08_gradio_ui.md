@@ -1,4 +1,8 @@
-# Building Interactive UIs with Gradio
+# Week 8: Building Interactive UIs with Gradio
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 7](week_07_visualization.md)** | **📝 [Week 8 Exercises](../exercises/week_08.md)** | **✅ [Week 8 Solutions](../solutions/week_08_solutions.md)** | **➡️ [Next: Week 9](week_09_benchmarking.md)**
+
+---
 
 ## Learning Goals
 

@@ -1,5 +1,9 @@
 # Week 4: Dijkstra's Algorithm
 
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 3](week_03_bfs_dfs.md)** | **📝 [Week 4 Exercises](../exercises/week_04.md)** | **✅ [Week 4 Solutions](../solutions/week_04_solutions.md)** | **🔬 [Notebook](../notebooks/03_dijkstra_astar.ipynb)** | **➡️ [Next: Week 5](week_05_astar.md)**
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will:

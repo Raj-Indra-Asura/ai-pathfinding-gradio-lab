@@ -124,6 +124,8 @@ ai-pathfinding-gradio-lab/
 
 ## 🗺️ 12-Week Learning Roadmap
 
+**📖 [Complete Learning Roadmap](LEARNING_ROADMAP.md)** - Your comprehensive guide with direct links to all resources!
+
 ### Month 1: Foundations
 - **Week 1**: Python project setup, virtual environments, pytest basics
 - **Week 2**: Grid model, nodes, obstacles, coordinate systems
@@ -141,6 +143,8 @@ ai-pathfinding-gradio-lab/
 - **Week 10**: Optional learned heuristics with scikit-learn
 - **Week 11**: Documentation, testing, and code quality
 - **Week 12**: Final integration, deployment, and reflection
+
+**👉 Start here: [Week 1 Documentation](docs/week_01_python_project_setup.md)**
 
 ## 🎓 Learning Outcomes
 
@@ -232,7 +236,9 @@ Each week includes:
 - **Solutions**: Detailed explanations and code
 - **Jupyter Notebook**: Interactive exploration
 
-Start with `docs/week_01_python_project_setup.md`!
+**🚀 Ready to start?**
+1. Read the [Complete Learning Roadmap](LEARNING_ROADMAP.md)
+2. Begin with [Week 1: Python Project Setup](docs/week_01_python_project_setup.md)
 
 ## 🧪 Testing
 

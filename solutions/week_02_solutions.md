@@ -1,5 +1,9 @@
 # Week 2: Solutions
 
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 1 Solutions](week_01_solutions.md)** | **📚 [Week 2 Documentation](../docs/week_02_grid_model.md)** | **📝 [Week 2 Exercises](../exercises/week_02.md)** | **➡️ [Next: Week 3 Solutions](week_03_solutions.md)**
+
+---
+
 ## Beginner Exercise Solution
 
 ### Explanation
@@ -342,4 +346,6 @@ print(f"Match: {reachable <= expected_max}")
 
 ---
 
-**Next: Week 3 Exercises →**
+---
+
+**📝 [Back to Week 2 Exercises](../exercises/week_02.md)** | **📚 [Week 2 Documentation](../docs/week_02_grid_model.md)** | **➡️ [Next: Week 3 Solutions](week_03_solutions.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

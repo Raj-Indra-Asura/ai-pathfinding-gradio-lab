@@ -1,4 +1,8 @@
-# Week 7: Visualization - Exercises
+# Week 7: Exercises
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 6 Exercises](week_06.md)** | **📚 [Week 7 Documentation](../docs/week_07_visualization.md)** | **✅ [Week 7 Solutions](../solutions/week_07_solutions.md)** | **➡️ [Next: Week 8 Exercises](week_08.md)**
+
+---
 
 ## Beginner Exercise: Custom Color Scheme Visualizer
 
@@ -353,3 +357,7 @@ Test your corrected code with:
 ---
 
 **See solutions/week_07_solutions.md for complete answers and explanations**
+
+---
+
+**✅ [See Solutions](../solutions/week_07_solutions.md)** | **📚 [Back to Week 7 Docs](../docs/week_07_visualization.md)** | **➡️ [Next: Week 8 Exercises](week_08.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

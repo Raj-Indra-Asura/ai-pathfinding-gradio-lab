@@ -1,4 +1,8 @@
-# Week 4 Solutions: Dijkstra's Algorithm
+# Week 4: Solutions
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 3 Solutions](week_03_solutions.md)** | **📚 [Week 4 Documentation](../docs/week_04_dijkstra.md)** | **📝 [Week 4 Exercises](../exercises/week_04.md)** | **➡️ [Next: Week 5 Solutions](week_05_solutions.md)**
+
+---
 
 ## Exercise 1: Priority Queue Cost Tracker (Beginner)
 
@@ -611,3 +615,7 @@ def early_exit_dijkstra(grid, start, goal):
 ---
 
 **Next: Continue to Week 5 - A* Algorithm →**
+
+---
+
+**📝 [Back to Week 4 Exercises](../exercises/week_04.md)** | **📚 [Week 4 Documentation](../docs/week_04_dijkstra.md)** | **➡️ [Next: Week 5 Solutions](week_05_solutions.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

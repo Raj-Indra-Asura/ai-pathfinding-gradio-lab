@@ -1,5 +1,9 @@
 # Week 10: Machine Learning Heuristics
 
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 9](week_09_benchmarking.md)** | **📝 [Week 10 Exercises](../exercises/week_10.md)** | **✅ [Week 10 Solutions](../solutions/week_10_solutions.md)** | **🔬 [Notebook](../notebooks/06_learned_heuristics.ipynb)** | **➡️ [Next: Week 11](week_11_polishing.md)**
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will understand:

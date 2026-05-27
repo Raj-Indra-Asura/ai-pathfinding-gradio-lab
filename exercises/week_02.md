@@ -1,5 +1,9 @@
 # Week 2: Exercises
 
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 1 Exercises](week_01.md)** | **📚 [Week 2 Documentation](../docs/week_02_grid_model.md)** | **✅ [Week 2 Solutions](../solutions/week_02_solutions.md)** | **➡️ [Next: Week 3 Exercises](week_03.md)**
+
+---
+
 ## Beginner Exercise
 
 ### Task: Grid Distance Calculator
@@ -209,4 +213,6 @@ The function should:
 
 ---
 
-**See solutions/week_02_solutions.md for answers**
+---
+
+**✅ [See Solutions](../solutions/week_02_solutions.md)** | **📚 [Back to Week 2 Docs](../docs/week_02_grid_model.md)** | **➡️ [Next: Week 3 Exercises](week_03.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

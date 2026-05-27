@@ -1,4 +1,8 @@
-# Week 12: Final Project Exercises
+# Week 12: Exercises
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 11 Exercises](week_11.md)** | **📚 [Week 12 Documentation](../docs/week_12_final_project.md)** | **✅ [Week 12 Solutions](../solutions/week_12_solutions.md)**
+
+---
 
 Welcome to the final week! These exercises integrate everything you've learned throughout the course. You'll build integration tests, implement a custom maze generator, optimize performance, and complete a capstone project.
 
@@ -831,3 +835,7 @@ Include:
 **See solutions/week_12_solutions.md for reference implementations**
 
 **Good luck with your final project!**
+
+---
+
+**✅ [See Solutions](../solutions/week_12_solutions.md)** | **📚 [Back to Week 12 Docs](../docs/week_12_final_project.md)** | **⬅️ [Previous: Week 11 Exercises](week_11.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

@@ -1,4 +1,8 @@
-# Week 6: Heuristic Functions - Exercises
+# Week 6: Exercises
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 5 Exercises](week_05.md)** | **📚 [Week 6 Documentation](../docs/week_06_heuristics.md)** | **✅ [Week 6 Solutions](../solutions/week_06_solutions.md)** | **➡️ [Next: Week 7 Exercises](week_07.md)**
+
+---
 
 ## Beginner Exercise: Distance Metric Calculator
 
@@ -285,3 +289,7 @@ After fixing all bugs:
 ---
 
 **See solutions/week_06_solutions.md for complete answers and explanations**
+
+---
+
+**✅ [See Solutions](../solutions/week_06_solutions.md)** | **📚 [Back to Week 6 Docs](../docs/week_06_heuristics.md)** | **➡️ [Next: Week 7 Exercises](week_07.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

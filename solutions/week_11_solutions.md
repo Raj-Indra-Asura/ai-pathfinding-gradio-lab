@@ -1,4 +1,8 @@
-# Week 11: Testing, Documentation, and Code Quality Solutions
+# Week 11: Solutions
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 10 Solutions](week_10_solutions.md)** | **📚 [Week 11 Documentation](../docs/week_11_polishing.md)** | **📝 [Week 11 Exercises](../exercises/week_11.md)** | **➡️ [Next: Week 12 Solutions](week_12_solutions.md)**
+
+---
 
 ## Exercise 1 Solution: Edge Case Tests
 
@@ -1411,3 +1415,7 @@ These practices transform a personal project into professional, maintainable cod
 - Test code deserves the same care and quality as production code
 
 **Next: Week 12 Capstone Project →**
+
+---
+
+**📝 [Back to Week 11 Exercises](../exercises/week_11.md)** | **📚 [Week 11 Documentation](../docs/week_11_polishing.md)** | **➡️ [Next: Week 12 Solutions](week_12_solutions.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**

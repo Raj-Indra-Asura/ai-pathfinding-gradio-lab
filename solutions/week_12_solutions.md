@@ -1,4 +1,8 @@
-# Week 12: Final Project Solutions
+# Week 12: Solutions
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 11 Solutions](week_11_solutions.md)** | **📚 [Week 12 Documentation](../docs/week_12_final_project.md)** | **📝 [Week 12 Exercises](../exercises/week_12.md)**
+
+---
 
 ## Exercise 1 Solution: Integration Testing
 
@@ -2209,3 +2213,7 @@ These solutions provide a foundation for building portfolio-worthy projects that
 - Documentation and testing are as important as implementation
 
 **Congratulations on completing the 12-week AI Pathfinding Laboratory course!**
+
+---
+
+**📝 [Back to Week 12 Exercises](../exercises/week_12.md)** | **📚 [Week 12 Documentation](../docs/week_12_final_project.md)** | **⬅️ [Previous: Week 11 Solutions](week_11_solutions.md)** | **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)**
