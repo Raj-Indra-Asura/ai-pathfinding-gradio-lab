@@ -6,7 +6,7 @@ from pathlib import Path
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
-from src.pathfinding_lab.ml.dataset import generate_training_data
+from pathfinding_lab.ml.dataset import generate_training_data
 
 
 def train_heuristic_model(

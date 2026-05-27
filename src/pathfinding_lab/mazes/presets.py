@@ -2,7 +2,7 @@
 
 from typing import List, Tuple
 
-from src.pathfinding_lab.core.types import Position
+from pathfinding_lab.core.types import Position
 
 
 def get_preset_maze(name: str, width: int, height: int) -> Tuple[Position, Position, List[Position]]:

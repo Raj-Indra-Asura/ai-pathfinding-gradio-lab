@@ -4,9 +4,9 @@ from typing import List
 
 import numpy as np
 
-from src.pathfinding_lab.core.grid import Grid
-from src.pathfinding_lab.core.types import Position
-from src.pathfinding_lab.ml.dataset import extract_features as base_extract_features
+from pathfinding_lab.core.grid import Grid
+from pathfinding_lab.core.types import Position
+from pathfinding_lab.ml.dataset import extract_features as base_extract_features
 
 
 def extract_features(grid: Grid, current: Position, goal: Position) -> np.ndarray:

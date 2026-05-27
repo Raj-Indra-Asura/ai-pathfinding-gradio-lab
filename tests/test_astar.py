@@ -2,11 +2,11 @@
 
 import pytest
 
-from src.pathfinding_lab.algorithms.astar import astar
-from src.pathfinding_lab.core.grid import Grid
-from src.pathfinding_lab.core.types import MovementMode
-from src.pathfinding_lab.heuristics.manhattan import manhattan_distance
-from src.pathfinding_lab.heuristics.euclidean import euclidean_distance
+from pathfinding_lab.algorithms.astar import astar
+from pathfinding_lab.core.grid import Grid
+from pathfinding_lab.core.types import MovementMode
+from pathfinding_lab.heuristics.manhattan import manhattan_distance
+from pathfinding_lab.heuristics.euclidean import euclidean_distance
 
 
 def test_astar_simple_path():
@@ -42,7 +42,7 @@ def test_astar_better_than_dijkstra():
     start = (0, 0)
     goal = (9, 9)
 
-    from src.pathfinding_lab.algorithms.dijkstra import dijkstra
+    from pathfinding_lab.algorithms.dijkstra import dijkstra
 
     astar_result = astar(grid, start, goal, manhattan_distance)
     dijkstra_result = dijkstra(grid, start, goal)

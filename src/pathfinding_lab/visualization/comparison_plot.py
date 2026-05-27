@@ -5,7 +5,7 @@ from typing import List
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from src.pathfinding_lab.core.result import SearchResult
+from pathfinding_lab.core.result import SearchResult
 
 
 def create_comparison_table(results: List[SearchResult]) -> pd.DataFrame:

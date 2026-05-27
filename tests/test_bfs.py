@@ -2,9 +2,9 @@
 
 import pytest
 
-from src.pathfinding_lab.algorithms.bfs import bfs
-from src.pathfinding_lab.core.grid import Grid
-from src.pathfinding_lab.core.types import MovementMode
+from pathfinding_lab.algorithms.bfs import bfs
+from pathfinding_lab.core.grid import Grid
+from pathfinding_lab.core.types import MovementMode
 
 
 def test_bfs_simple_path():

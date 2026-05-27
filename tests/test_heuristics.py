@@ -3,11 +3,11 @@
 import pytest
 import math
 
-from src.pathfinding_lab.heuristics.manhattan import manhattan_distance
-from src.pathfinding_lab.heuristics.euclidean import euclidean_distance
-from src.pathfinding_lab.heuristics.chebyshev import chebyshev_distance
-from src.pathfinding_lab.heuristics.octile import octile_distance
-from src.pathfinding_lab.heuristics.weighted import weighted_manhattan_distance
+from pathfinding_lab.heuristics.manhattan import manhattan_distance
+from pathfinding_lab.heuristics.euclidean import euclidean_distance
+from pathfinding_lab.heuristics.chebyshev import chebyshev_distance
+from pathfinding_lab.heuristics.octile import octile_distance
+from pathfinding_lab.heuristics.weighted import weighted_manhattan_distance
 
 
 def test_manhattan_distance():

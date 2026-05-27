@@ -3,8 +3,8 @@
 import random
 from typing import Set
 
-from src.pathfinding_lab.core.grid import Grid
-from src.pathfinding_lab.core.types import Position
+from pathfinding_lab.core.grid import Grid
+from pathfinding_lab.core.types import Position
 
 
 def generate_random_obstacles(

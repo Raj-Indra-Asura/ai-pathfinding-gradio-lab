@@ -2,8 +2,8 @@
 
 import pytest
 
-from src.pathfinding_lab.core.grid import Grid
-from src.pathfinding_lab.core.types import MovementMode
+from pathfinding_lab.core.grid import Grid
+from pathfinding_lab.core.types import MovementMode
 
 
 def test_grid_creation():

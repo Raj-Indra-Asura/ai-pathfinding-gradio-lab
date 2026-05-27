@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.colors import ListedColormap
 
-from src.pathfinding_lab.core.grid import Grid
-from src.pathfinding_lab.core.result import SearchResult
-from src.pathfinding_lab.core.types import Position
+from pathfinding_lab.core.grid import Grid
+from pathfinding_lab.core.result import SearchResult
+from pathfinding_lab.core.types import Position
 
 
 def create_grid_plot(

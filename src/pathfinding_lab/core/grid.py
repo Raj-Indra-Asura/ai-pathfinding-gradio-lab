@@ -5,8 +5,8 @@ from typing import List, Optional, Set
 
 import numpy as np
 
-from src.pathfinding_lab.core.node import Node
-from src.pathfinding_lab.core.types import MovementMode, Position
+from pathfinding_lab.core.node import Node
+from pathfinding_lab.core.types import MovementMode, Position
 
 
 class Grid:

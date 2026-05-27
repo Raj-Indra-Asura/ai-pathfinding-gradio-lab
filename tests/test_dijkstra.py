@@ -2,9 +2,9 @@
 
 import pytest
 
-from src.pathfinding_lab.algorithms.dijkstra import dijkstra
-from src.pathfinding_lab.core.grid import Grid
-from src.pathfinding_lab.core.types import MovementMode
+from pathfinding_lab.algorithms.dijkstra import dijkstra
+from pathfinding_lab.core.grid import Grid
+from pathfinding_lab.core.types import MovementMode
 
 
 def test_dijkstra_simple_path():

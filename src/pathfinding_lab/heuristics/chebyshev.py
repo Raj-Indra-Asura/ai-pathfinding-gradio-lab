@@ -1,6 +1,6 @@
 """Chebyshev distance heuristic."""
 
-from src.pathfinding_lab.core.types import Position
+from pathfinding_lab.core.types import Position
 
 
 def chebyshev_distance(pos1: Position, pos2: Position) -> float:

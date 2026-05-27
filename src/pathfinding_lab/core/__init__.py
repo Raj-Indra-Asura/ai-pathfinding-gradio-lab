@@ -1,8 +1,4 @@
-"""
-AI Pathfinding Laboratory - Educational pathfinding algorithms with Gradio interface.
-"""
-
-__version__ = "0.1.0"
+"""Core data structures module."""
 
 from pathfinding_lab.core.grid import Grid
 from pathfinding_lab.core.node import Node

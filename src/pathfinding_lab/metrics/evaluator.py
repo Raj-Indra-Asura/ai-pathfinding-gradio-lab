@@ -2,7 +2,7 @@
 
 from typing import Dict
 
-from src.pathfinding_lab.core.result import SearchResult
+from pathfinding_lab.core.result import SearchResult
 
 
 def evaluate_result(result: SearchResult) -> Dict[str, any]:

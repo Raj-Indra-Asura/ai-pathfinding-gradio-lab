@@ -2,10 +2,10 @@
 
 import pytest
 
-from src.pathfinding_lab.algorithms.bfs import bfs
-from src.pathfinding_lab.core.grid import Grid
-from src.pathfinding_lab.core.types import MovementMode
-from src.pathfinding_lab.metrics.evaluator import evaluate_result, calculate_heuristic_quality
+from pathfinding_lab.algorithms.bfs import bfs
+from pathfinding_lab.core.grid import Grid
+from pathfinding_lab.core.types import MovementMode
+from pathfinding_lab.metrics.evaluator import evaluate_result, calculate_heuristic_quality
 
 
 def test_evaluate_result():

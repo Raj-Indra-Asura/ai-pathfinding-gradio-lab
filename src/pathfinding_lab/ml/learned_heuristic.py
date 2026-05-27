@@ -7,9 +7,9 @@ from typing import Optional
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 
-from src.pathfinding_lab.core.grid import Grid
-from src.pathfinding_lab.core.types import Position
-from src.pathfinding_lab.ml.features import extract_features
+from pathfinding_lab.core.grid import Grid
+from pathfinding_lab.core.types import Position
+from pathfinding_lab.ml.features import extract_features
 
 
 class LearnedHeuristic:

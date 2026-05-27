@@ -4,9 +4,9 @@ import time
 from collections import deque
 from typing import Dict, Set
 
-from src.pathfinding_lab.core.grid import Grid
-from src.pathfinding_lab.core.result import SearchResult
-from src.pathfinding_lab.core.types import Position
+from pathfinding_lab.core.grid import Grid
+from pathfinding_lab.core.result import SearchResult
+from pathfinding_lab.core.types import Position
 
 
 def bidirectional_bfs(grid: Grid, start: Position, goal: Position) -> SearchResult:

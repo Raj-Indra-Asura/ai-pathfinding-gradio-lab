@@ -1,6 +1,6 @@
 """Weighted Manhattan distance heuristic."""
 
-from src.pathfinding_lab.core.types import Position
+from pathfinding_lab.core.types import Position
 
 
 def weighted_manhattan_distance(pos1: Position, pos2: Position, weight: float = 1.0) -> float:

@@ -3,7 +3,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-from src.pathfinding_lab.core.types import Position
+from pathfinding_lab.core.types import Position
 
 
 @dataclass

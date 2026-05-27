@@ -4,25 +4,25 @@ import gradio as gr
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from src.pathfinding_lab.algorithms.astar import astar
-from src.pathfinding_lab.algorithms.bfs import bfs
-from src.pathfinding_lab.algorithms.bidirectional_bfs import bidirectional_bfs
-from src.pathfinding_lab.algorithms.dfs import dfs
-from src.pathfinding_lab.algorithms.dijkstra import dijkstra
-from src.pathfinding_lab.algorithms.greedy_best_first import greedy_best_first
-from src.pathfinding_lab.core.grid import Grid
-from src.pathfinding_lab.core.result import SearchResult
-from src.pathfinding_lab.core.types import MovementMode
-from src.pathfinding_lab.heuristics.chebyshev import chebyshev_distance
-from src.pathfinding_lab.heuristics.euclidean import euclidean_distance
-from src.pathfinding_lab.heuristics.manhattan import manhattan_distance
-from src.pathfinding_lab.heuristics.octile import octile_distance
-from src.pathfinding_lab.heuristics.weighted import weighted_manhattan_distance
-from src.pathfinding_lab.visualization.comparison_plot import (
+from pathfinding_lab.algorithms.astar import astar
+from pathfinding_lab.algorithms.bfs import bfs
+from pathfinding_lab.algorithms.bidirectional_bfs import bidirectional_bfs
+from pathfinding_lab.algorithms.dfs import dfs
+from pathfinding_lab.algorithms.dijkstra import dijkstra
+from pathfinding_lab.algorithms.greedy_best_first import greedy_best_first
+from pathfinding_lab.core.grid import Grid
+from pathfinding_lab.core.result import SearchResult
+from pathfinding_lab.core.types import MovementMode
+from pathfinding_lab.heuristics.chebyshev import chebyshev_distance
+from pathfinding_lab.heuristics.euclidean import euclidean_distance
+from pathfinding_lab.heuristics.manhattan import manhattan_distance
+from pathfinding_lab.heuristics.octile import octile_distance
+from pathfinding_lab.heuristics.weighted import weighted_manhattan_distance
+from pathfinding_lab.visualization.comparison_plot import (
     create_comparison_plot,
     create_comparison_table,
 )
-from src.pathfinding_lab.visualization.grid_plot import create_grid_plot
+from pathfinding_lab.visualization.grid_plot import create_grid_plot
 
 # Global state to maintain grid between calls
 current_grid = None

@@ -5,9 +5,9 @@ from typing import List, Tuple
 
 import numpy as np
 
-from src.pathfinding_lab.algorithms.dijkstra import dijkstra
-from src.pathfinding_lab.core.grid import Grid
-from src.pathfinding_lab.core.types import MovementMode, Position
+from pathfinding_lab.algorithms.dijkstra import dijkstra
+from pathfinding_lab.core.grid import Grid
+from pathfinding_lab.core.types import MovementMode, Position
 
 
 def generate_training_data(
