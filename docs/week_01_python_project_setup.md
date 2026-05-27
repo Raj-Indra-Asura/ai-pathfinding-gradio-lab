@@ -1,5 +1,9 @@
 # Week 1: Python Project Setup
 
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **📝 [Week 1 Exercises](../exercises/week_01.md)** | **✅ [Week 1 Solutions](../solutions/week_01_solutions.md)** | **➡️ [Next: Week 2](week_02_grid_model.md)**
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will:
@@ -171,4 +175,18 @@ Next week, we'll dive into the grid model - the foundation of our pathfinding sy
 
 ---
 
-**Continue to Week 2: Grid Model →**
+## 📚 Additional Learning Resources
+
+### Week 1 Materials:
+- **📝 [Week 1 Exercises](../exercises/week_01.md)** - Practice problems
+- **✅ [Week 1 Solutions](../solutions/week_01_solutions.md)** - Detailed solutions
+- **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)** - Full 12-week guide
+
+### External Resources:
+- [Python Packaging User Guide](https://packaging.python.org/)
+- [pytest Documentation](https://docs.pytest.org/)
+- [Virtual Environments Explained](https://realpython.com/python-virtual-environments-a-primer/)
+
+---
+
+**➡️ [Continue to Week 2: Grid Model](week_02_grid_model.md)** | **📖 [Back to Roadmap](../LEARNING_ROADMAP.md)**

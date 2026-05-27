@@ -1,5 +1,9 @@
 # Week 3: BFS and DFS
 
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 2](week_02_grid_model.md)** | **📝 [Week 3 Exercises](../exercises/week_03.md)** | **✅ [Week 3 Solutions](../solutions/week_03_solutions.md)** | **🔬 [Notebook](../notebooks/02_bfs_dfs.ipynb)** | **➡️ [Next: Week 4](week_04_dijkstra.md)**
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will:
@@ -350,4 +354,11 @@ Next week, we'll learn **Dijkstra's Algorithm**, which extends BFS to handle wei
 
 ---
 
-**Continue to Week 4: Dijkstra's Algorithm →**
+## 📚 Week 3 Resources
+
+- **📝 [Week 3 Exercises](../exercises/week_03.md)** - Practice problems
+- **✅ [Week 3 Solutions](../solutions/week_03_solutions.md)** - Detailed solutions
+- **🔬 [BFS & DFS Notebook](../notebooks/02_bfs_dfs.ipynb)** - Interactive exploration
+- **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)** - Full 12-week guide
+
+**➡️ [Continue to Week 4: Dijkstra's Algorithm](week_04_dijkstra.md)** | **⬅️ [Back to Week 2](week_02_grid_model.md)** | **📖 [Back to Roadmap](../LEARNING_ROADMAP.md)**

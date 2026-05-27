@@ -1,5 +1,9 @@
 # Week 12: Final Project Integration and Reflection
 
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 11](week_11_polishing.md)** | **📝 [Week 12 Exercises](../exercises/week_12.md)** | **✅ [Week 12 Solutions](../solutions/week_12_solutions.md)**
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will understand:

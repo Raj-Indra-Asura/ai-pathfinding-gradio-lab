@@ -1,5 +1,9 @@
 # Week 9: Benchmarking and Performance Analysis
 
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 8](week_08_gradio_ui.md)** | **📝 [Week 9 Exercises](../exercises/week_09.md)** | **✅ [Week 9 Solutions](../solutions/week_09_solutions.md)** | **🔬 [Notebook](../notebooks/05_algorithm_comparison.ipynb)** | **➡️ [Next: Week 10](week_10_ml_heuristic.md)**
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will understand:

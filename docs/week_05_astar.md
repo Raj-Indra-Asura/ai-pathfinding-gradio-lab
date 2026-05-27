@@ -1,5 +1,9 @@
 # Week 5: A* Search Algorithm
 
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 4](week_04_dijkstra.md)** | **📝 [Week 5 Exercises](../exercises/week_05.md)** | **✅ [Week 5 Solutions](../solutions/week_05_solutions.md)** | **🔬 [Notebook](../notebooks/03_dijkstra_astar.ipynb)** | **➡️ [Next: Week 6](week_06_heuristics.md)**
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will:

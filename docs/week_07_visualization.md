@@ -1,4 +1,8 @@
-# Visualization Techniques for Pathfinding
+# Week 7: Visualization Techniques for Pathfinding
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 6](week_06_heuristics.md)** | **📝 [Week 7 Exercises](../exercises/week_07.md)** | **✅ [Week 7 Solutions](../solutions/week_07_solutions.md)** | **➡️ [Next: Week 8](week_08_gradio_ui.md)**
+
+---
 
 ## Learning Goals
 

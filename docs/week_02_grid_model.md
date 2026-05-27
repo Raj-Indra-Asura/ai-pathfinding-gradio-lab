@@ -1,5 +1,9 @@
 # Week 2: Grid Model
 
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 1](week_01_python_project_setup.md)** | **📝 [Week 2 Exercises](../exercises/week_02.md)** | **✅ [Week 2 Solutions](../solutions/week_02_solutions.md)** | **🔬 [Notebook](../notebooks/01_grid_basics.ipynb)** | **➡️ [Next: Week 3](week_03_bfs_dfs.md)**
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will:
@@ -305,4 +309,11 @@ Next week, we'll implement our first pathfinding algorithms: **BFS (Breadth-Firs
 
 ---
 
-**Continue to Week 3: BFS and DFS →**
+## 📚 Week 2 Resources
+
+- **📝 [Week 2 Exercises](../exercises/week_02.md)** - Practice problems
+- **✅ [Week 2 Solutions](../solutions/week_02_solutions.md)** - Detailed solutions
+- **🔬 [Grid Basics Notebook](../notebooks/01_grid_basics.ipynb)** - Interactive exploration
+- **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)** - Full 12-week guide
+
+**➡️ [Continue to Week 3: BFS and DFS](week_03_bfs_dfs.md)** | **⬅️ [Back to Week 1](week_01_python_project_setup.md)** | **📖 [Back to Roadmap](../LEARNING_ROADMAP.md)**

@@ -1,4 +1,8 @@
-# Heuristic Functions Deep Dive
+# Week 6: Heuristic Functions Deep Dive
+
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 5](week_05_astar.md)** | **📝 [Week 6 Exercises](../exercises/week_06.md)** | **✅ [Week 6 Solutions](../solutions/week_06_solutions.md)** | **🔬 [Notebook](../notebooks/04_heuristics.ipynb)** | **➡️ [Next: Week 7](week_07_visualization.md)**
+
+---
 
 ## Learning Goals
 

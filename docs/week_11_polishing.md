@@ -1,5 +1,9 @@
 # Week 11: Testing, Documentation, and Project Polishing
 
+**📖 [Back to Learning Roadmap](../LEARNING_ROADMAP.md)** | **⬅️ [Previous: Week 10](week_10_ml_heuristic.md)** | **📝 [Week 11 Exercises](../exercises/week_11.md)** | **✅ [Week 11 Solutions](../solutions/week_11_solutions.md)** | **➡️ [Next: Week 12](week_12_final_project.md)**
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will understand:
