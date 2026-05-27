@@ -1,73 +1,378 @@
-# Dijkstra's Algorithm
+# Week 4: Dijkstra's Algorithm
 
 ## Learning Goals
 
-By the end of this week, you will understand:
-- Weighted pathfinding and optimal paths
-- Practical implementation details
-- Common pitfalls and solutions
-- How this fits into the larger system
+By the end of this week, you will:
+- Understand weighted pathfinding and why BFS isn't enough
+- Implement Dijkstra's algorithm with a priority queue
+- Learn when Dijkstra's algorithm is optimal
+- Understand the difference between BFS and Dijkstra's
+- Use heapq for efficient priority queue operations
 
 ## Theory
 
-[Theory content explaining key concepts]
+### Why BFS Isn't Always Enough
+
+**Problem with BFS**: BFS finds the shortest path in terms of *number of steps*, but what if different moves have different costs?
+
+**Example Scenario**:
+- Moving through grass: cost = 1
+- Moving through swamp: cost = 5
+- Moving through road: cost = 0.5
+
+BFS treats all moves equally, but in the real world, we care about *total cost*, not just *number of steps*.
+
+### Introducing Dijkstra's Algorithm
+
+**Dijkstra's Algorithm** finds the shortest path considering edge weights (movement costs). It's the gold standard for single-source shortest path on graphs with non-negative weights.
+
+**Key Idea**: Explore nodes in order of increasing cost from the start. Always expand the lowest-cost unexplored node next.
+
+**Key Characteristics**:
+- Uses a **priority queue** (min-heap)
+- Explores in order of cost from start
+- **Guarantees optimal path** (with non-negative weights)
+- More general than BFS (BFS is Dijkstra's with all weights = 1)
+
+### How It Works
+
+**Algorithm Steps**:
+1. Start with priority queue containing start position at cost 0
+2. Track the best known cost to reach each position
+3. While priority queue is not empty:
+   - Pop the position with lowest cost
+   - If it's the goal, we found the optimal path!
+   - For each neighbor:
+     - Calculate new cost: current cost + edge cost
+     - If new cost is better than known cost, update and add to queue
+     - Track parent for path reconstruction
+
+**Why It's Optimal**:
+Because we always expand the lowest-cost node first, when we reach the goal, we know we've found the cheapest path. Any other path would have required expanding a more expensive node.
+
+### Dijkstra's vs BFS
+
+| Feature | BFS | Dijkstra's |
+|---------|-----|-----------|
+| **Data Structure** | Queue (FIFO) | Priority Queue (min-heap) |
+| **Expansion Order** | Distance from start | Cost from start |
+| **Edge Weights** | Unweighted (all = 1) | Weighted (any ≥ 0) |
+| **Shortest Path** | ✅ By steps | ✅ By cost |
+| **Time Complexity** | O(V + E) | O((V + E) log V) |
+| **Use Cases** | Equal-cost moves | Different movement costs |
+
+**Key Insight**: BFS is Dijkstra's algorithm where all edges have weight 1!
+
+### Priority Queue (Heap)
+
+**What is a Priority Queue?**
+A data structure where elements are removed in order of priority (lowest cost first).
+
+**Python's heapq**:
+- `heappush(heap, item)`: Add item (O(log n))
+- `heappop(heap)`: Remove and return smallest item (O(log n))
+- Stores tuples: `(priority, data)`
+
+**Why It Matters**:
+- Regular queue (BFS): Explores by distance
+- Priority queue (Dijkstra's): Explores by cost
+- This difference makes Dijkstra's optimal for weighted graphs
 
 ## Code Walkthrough
 
-### Key Implementation
+### Dijkstra's Implementation (`src/pathfinding_lab/algorithms/dijkstra.py`)
 
-Review the relevant source files in `src/pathfinding_lab/`
+Let's examine the key parts:
 
-### Important Functions
+#### 1. Initialization
 
-[Explanation of key functions and their purposes]
+```python
+import heapq
+
+# Priority queue: (cost, position)
+pq = [(0.0, start)]
+cost_so_far = {start: 0.0}  # Best known cost to each position
+parent = {}                  # For path reconstruction
+visited_order = []           # Track exploration order
+```
+
+**Key Points**:
+- Priority queue stores `(cost, position)` tuples
+- `cost_so_far` tracks the best cost found to reach each position
+- Costs are floats to handle fractional movement costs
+
+#### 2. Main Dijkstra Loop
+
+```python
+while pq:
+    current_cost, current = heapq.heappop(pq)  # Get lowest-cost node
+
+    # Skip if we've already found a better path to this node
+    if current_cost > cost_so_far.get(current, float('inf')):
+        continue
+
+    visited_order.append(current)
+
+    # Goal check
+    if current == goal:
+        path = _reconstruct_path(parent, start, goal)
+        return SearchResult(...)
+
+    # Explore neighbors
+    for neighbor in grid.get_neighbors(current):
+        # Calculate cost via current node
+        move_cost = grid.get_movement_cost(current, neighbor)
+        new_cost = current_cost + move_cost
+
+        # If this path is better, update
+        if new_cost < cost_so_far.get(neighbor, float('inf')):
+            cost_so_far[neighbor] = new_cost
+            parent[neighbor] = current
+            heapq.heappush(pq, (new_cost, neighbor))
+```
+
+**Process**:
+1. **Pop lowest-cost node**: `heappop` gives us the cheapest unexplored option
+2. **Skip if outdated**: Due to duplicates in heap, check if we've found better path
+3. **Goal check**: When we reach goal, we have the optimal path!
+4. **Update neighbors**: If we found a cheaper path, update cost and add to queue
+
+#### 3. Why Skip Outdated Nodes?
+
+**Problem**: We can add the same position to the priority queue multiple times with different costs.
+
+**Example**:
+```python
+# First path to (1,1): cost = 10
+heappush(pq, (10, (1,1)))
+
+# Later, better path to (1,1): cost = 5
+heappush(pq, (5, (1,1)))
+
+# Both entries exist in the queue!
+# We want to skip the outdated (10, (1,1)) entry
+```
+
+**Solution**:
+```python
+if current_cost > cost_so_far.get(current, float('inf')):
+    continue  # Skip outdated entry
+```
+
+#### 4. Movement Cost Calculation
+
+```python
+move_cost = grid.get_movement_cost(current, neighbor)
+```
+
+**What affects movement cost?**
+- Base movement (1.0 for orthogonal, √2 for diagonal)
+- Terrain type (if implemented)
+- Grid-specific weights
+
+For basic grids:
+- 4-directional: all moves cost 1.0
+- 8-directional: orthogonal = 1.0, diagonal = √2 ≈ 1.414
 
 ## Common Mistakes
 
-1. **Mistake 1**: Description
-   - **Problem**: What goes wrong
-   - **Solution**: How to fix it
+### 1. Using a Regular List Instead of Heapq
 
-2. **Mistake 2**: Description
-   - **Problem**: What goes wrong
-   - **Solution**: How to fix it
+**Problem**: Manually sorting is slow!
+```python
+# WRONG - O(n log n) every iteration
+queue = [(0, start)]
+while queue:
+    queue.sort()  # Expensive!
+    cost, current = queue.pop(0)
+```
+
+**Solution**: Use `heapq` for O(log n) operations
+```python
+# CORRECT
+import heapq
+pq = [(0, start)]
+while pq:
+    cost, current = heapq.heappop(pq)  # O(log n)
+```
+
+### 2. Forgetting the Outdated Node Check
+
+**Problem**: Processing the same node multiple times wastes time
+```python
+# WRONG - no duplicate check
+while pq:
+    current_cost, current = heapq.heappop(pq)
+    # Process node even if we found a better path already
+```
+
+**Solution**: Skip outdated entries
+```python
+# CORRECT
+while pq:
+    current_cost, current = heapq.heappop(pq)
+    if current_cost > cost_so_far.get(current, float('inf')):
+        continue  # Skip outdated entry
+```
+
+### 3. Not Updating cost_so_far Before Adding to Queue
+
+**Problem**: Infinite loops or incorrect results
+```python
+# WRONG - check happens before update
+if new_cost < cost_so_far.get(neighbor, float('inf')):
+    heapq.heappush(pq, (new_cost, neighbor))
+    cost_so_far[neighbor] = new_cost  # Too late!
+```
+
+**Solution**: Update `cost_so_far` immediately
+```python
+# CORRECT
+if new_cost < cost_so_far.get(neighbor, float('inf')):
+    cost_so_far[neighbor] = new_cost  # Update first
+    parent[neighbor] = current
+    heapq.heappush(pq, (new_cost, neighbor))
+```
+
+### 4. Using Dijkstra's with Negative Weights
+
+**Problem**: Dijkstra's algorithm **does not work** with negative edge weights!
+
+**Why**: Once a node is popped from the priority queue, Dijkstra's assumes we've found the optimal path to it. Negative weights can invalidate this assumption.
+
+**Example**:
+```
+Start -> A: cost = 5
+Start -> B -> A: cost = 10 + (-8) = 2  # Better, but found later!
+```
+
+**Solution**: Use **Bellman-Ford** algorithm for graphs with negative weights (not covered in this course).
+
+### 5. Comparing Dijkstra's to BFS on Unweighted Graphs
+
+**Problem**: Using Dijkstra's when BFS would work
+
+**When all weights are equal (or weight = 1)**:
+- BFS: O(V + E)
+- Dijkstra's: O((V + E) log V)
+
+**Solution**: Use BFS for unweighted graphs—it's faster and simpler!
 
 ## Mini Project Task
 
-### This Week's Challenge
+### Task: Implement Weighted Grid Movement
 
-[Specific coding task for this week]
+Create a grid where different terrain types have different movement costs, then compare how BFS and Dijkstra's perform.
 
-### Steps
+**Requirements**:
+1. Create a 20x20 grid with three terrain types:
+   - **Grass** (70%): cost = 1.0
+   - **Swamp** (20%): cost = 3.0
+   - **Road** (10%): cost = 0.5
+2. Run BFS and Dijkstra's from (0,0) to (19,19)
+3. Compare:
+   - Path lengths (number of steps)
+   - Path costs (total movement cost)
+   - Which finds the cheaper path?
 
-1. Step one
-2. Step two
-3. Step three
+**Starter Code**:
+```python
+from pathfinding_lab.core.grid import Grid
+from pathfinding_lab.core.types import MovementMode
+from pathfinding_lab.algorithms.bfs import bfs
+from pathfinding_lab.algorithms.dijkstra import dijkstra
+import random
+
+# Create weighted grid (you'll need to extend Grid class or track terrain separately)
+grid = Grid(20, 20, 0.0, MovementMode.FOUR_DIRECTIONAL, random_seed=42)
+start = (0, 0)
+goal = (19, 19)
+
+# For this exercise, assume equal weights (all = 1.0)
+# In a real implementation, you'd modify Grid to support terrain types
+
+# Run both algorithms
+bfs_result = bfs(grid, start, goal)
+dijkstra_result = dijkstra(grid, start, goal)
+
+print("BFS Results:")
+print(f"  Path length: {bfs_result.path_length} steps")
+print(f"  Path cost: {bfs_result.path_cost:.2f}")
+print(f"  Nodes visited: {bfs_result.nodes_visited}")
+
+print("\nDijkstra's Results:")
+print(f"  Path length: {dijkstra_result.path_length} steps")
+print(f"  Path cost: {dijkstra_result.path_cost:.2f}")
+print(f"  Nodes visited: {dijkstra_result.nodes_visited}")
+
+print("\nComparison:")
+print(f"  Same path? {bfs_result.path == dijkstra_result.path}")
+print(f"  Cost difference: {abs(bfs_result.path_cost - dijkstra_result.path_cost):.2f}")
+```
 
 ### Success Criteria
 
-- ✅ Criterion 1
-- ✅ Criterion 2
-- ✅ Criterion 3
+- ✅ Both algorithms find a path
+- ✅ With equal weights, both find the same cost
+- ✅ Understand why Dijkstra's is needed for weighted graphs
+- ✅ Can explain the difference in exploration order
+
+### Challenge Extension
+
+Modify the grid to have actual terrain weights and observe how Dijkstra's finds cheaper paths than BFS by avoiding expensive terrain!
 
 ## Reflection Questions
 
-1. Question about key concept 1
-2. Question about key concept 2
-3. Question about practical application
-4. Question about trade-offs
-5. Question about next steps
+1. **Why does Dijkstra's algorithm guarantee the optimal path?**
+   - Hint: Think about the order in which nodes are explored
+
+2. **When would you use BFS instead of Dijkstra's?**
+   - Consider: Performance, simplicity, problem requirements
+
+3. **What happens if you use Dijkstra's on a graph with negative weights?**
+   - Think about: The optimality assumption, when can it break?
+
+4. **How is the priority queue critical to Dijkstra's correctness?**
+   - Consider: What if we used a regular queue or stack?
+
+5. **Why do we need the "skip outdated nodes" check?**
+   - Think about: Duplicate entries in the priority queue
+
+## Practical Applications
+
+### Real-World Uses of Dijkstra's
+
+1. **GPS Navigation**: Finding shortest routes with different road speeds
+2. **Network Routing**: Finding optimal packet routes (OSPF protocol)
+3. **Robotics**: Path planning with varied terrain costs
+4. **Game AI**: NPC pathfinding in games with movement penalties
+
+### When Dijkstra's Falls Short
+
+- **Large graphs**: Can be slow; consider A* with heuristics (next week!)
+- **Negative weights**: Use Bellman-Ford instead
+- **Changing graphs**: Need dynamic algorithms (D* Lite)
 
 ## Additional Resources
 
-- Resource 1
-- Resource 2
-- Resource 3
+- [Red Blob Games - Dijkstra's Implementation](https://www.redblobgames.com/pathfinding/a-star/introduction.html#dijkstra)
+- [Visualizing Dijkstra's Algorithm](https://visualgo.net/en/sssp)
+- [Priority Queue Data Structure](https://docs.python.org/3/library/heapq.html)
+- [Dijkstra's Algorithm Proof of Correctness](https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/)
 
 ## Next Week Preview
 
-[Preview of next week's topic]
+Next week, we'll learn **A* Algorithm**, which combines Dijkstra's with heuristics for even faster pathfinding. You'll learn:
+- How heuristics guide the search
+- Manhattan and Euclidean distance heuristics
+- Why A* is faster than Dijkstra's
+- Admissible and consistent heuristics
+
+**Preparation**: Make sure you understand:
+- How Dijkstra's uses a priority queue
+- Why Dijkstra's explores in order of cost
+- Path reconstruction with parent pointers
 
 ---
 
-**Continue to next week →**
+**Continue to Week 5: A* Algorithm →**
