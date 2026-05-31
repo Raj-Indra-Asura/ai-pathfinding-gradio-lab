@@ -223,6 +223,7 @@ Each week follows this pattern:
 - [Week 7 Documentation](docs/week_07_visualization.md)
 - [Week 7 Exercises](exercises/week_07.md)
 - [Week 7 Solutions](solutions/week_07_solutions.md)
+- [Notebook: Visualization Techniques](notebooks/07_visualization.ipynb)
 
 **🎯 What You'll Learn**:
 - Matplotlib basics
@@ -254,6 +255,7 @@ Each week follows this pattern:
 - [Week 8 Documentation](docs/week_08_gradio_ui.md)
 - [Week 8 Exercises](exercises/week_08.md)
 - [Week 8 Solutions](solutions/week_08_solutions.md)
+- [Notebook: Gradio UI](notebooks/08_gradio_ui.ipynb)
 
 **🎯 What You'll Learn**:
 - Gradio framework basics
@@ -354,6 +356,7 @@ Each week follows this pattern:
 - [Week 11 Documentation](docs/week_11_polishing.md)
 - [Week 11 Exercises](exercises/week_11.md)
 - [Week 11 Solutions](solutions/week_11_solutions.md)
+- [Notebook: Polishing & Testing](notebooks/11_polishing_testing.ipynb)
 
 **🎯 What You'll Learn**:
 - Writing comprehensive tests
