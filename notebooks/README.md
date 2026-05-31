@@ -80,6 +80,42 @@ This directory contains interactive Jupyter notebooks for learning pathfinding a
   - Admissibility challenges with ML
   - Performance trade-offs (accuracy vs speed)
 
+### [07_visualization.ipynb](07_visualization.ipynb)
+**Related to**: [Week 7 - Visualization](../docs/week_07_visualization.md)
+- **Topics**: Grid/path visualization and comparison plots
+- **Level**: Intermediate
+- **Duration**: 45-60 minutes
+- **Prerequisites**: 03_dijkstra_astar
+- **Key Concepts**:
+  - Plotting grids, visited nodes, and final paths
+  - Visual comparison of BFS vs A*
+  - Algorithm metrics tables and charts
+  - Color mapping and visual interpretation
+
+### [08_gradio_ui.ipynb](08_gradio_ui.ipynb)
+**Related to**: [Week 8 - Gradio UI](../docs/week_08_gradio_ui.md)
+- **Topics**: Building and testing interactive Gradio components
+- **Level**: Intermediate
+- **Duration**: 45-60 minutes
+- **Prerequisites**: 07_visualization
+- **Key Concepts**:
+  - Gradio Blocks layout patterns
+  - Programmatic UI function testing
+  - Event wiring with inputs/outputs
+  - Reusing project UI modules
+
+### [11_polishing_testing.ipynb](11_polishing_testing.ipynb)
+**Related to**: [Week 11 - Polishing & Testing](../docs/week_11_polishing.md)
+- **Topics**: Testing workflows, type hints, profiling walkthrough
+- **Level**: Advanced
+- **Duration**: 45-60 minutes
+- **Prerequisites**: All previous notebooks
+- **Key Concepts**:
+  - Running focused pytest slices
+  - Type-hinted helper functions
+  - Lightweight runtime benchmarking
+  - Practical project polishing habits
+
 ## Getting Started
 
 1. **Install dependencies**:
@@ -92,21 +128,36 @@ This directory contains interactive Jupyter notebooks for learning pathfinding a
    jupyter notebook
    ```
 
-3. **Work through notebooks in order** (01 → 02 → 03 → 04 → 05 → 06)
+3. **Work through notebooks in order** (01 → 02 → 03 → 04 → 07 → 08 → 05 → 06 → 11)
 
 ## Learning Path
 
-### Week 1-2: Foundations
+### Week 2: Grid Model
 - 01_grid_basics
+
+### Week 3: BFS & DFS
 - 02_bfs_dfs
 
-### Week 3-4: Optimal Algorithms
+### Week 4-5: Dijkstra & A*
 - 03_dijkstra_astar
+
+### Week 6: Heuristics
 - 04_heuristics
 
-### Week 5-6: Advanced Topics
+### Week 7: Visualization
+- 07_visualization
+
+### Week 8: Gradio UI
+- 08_gradio_ui
+
+### Week 9: Benchmarking
 - 05_algorithm_comparison
+
+### Week 10: ML Heuristics
 - 06_learned_heuristics
+
+### Week 11: Polishing & Testing
+- 11_polishing_testing
 
 ## Key Features
 
