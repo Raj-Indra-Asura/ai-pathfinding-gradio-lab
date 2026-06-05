@@ -102,7 +102,13 @@ def test_greedy_different_heuristics_both_find_path():
 
 
 def test_greedy_fewer_nodes_than_bfs():
-    """Test Greedy typically visits fewer nodes than BFS on an open grid."""
+    """Test Greedy typically visits fewer nodes than BFS on an open grid.
+
+    On a large, obstacle-free grid Greedy Best-First is guided directly toward
+    the goal by the heuristic, so it explores far fewer nodes than BFS.
+    This property only holds reliably on open grids; in maze-like environments
+    the heuristic can lead Greedy into dead ends, causing it to visit more nodes.
+    """
     grid = Grid(10, 10, 0.0, MovementMode.FOUR_DIRECTIONAL)
     start = (0, 0)
     goal = (9, 9)

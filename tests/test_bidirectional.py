@@ -88,7 +88,14 @@ def test_bidirectional_visited_tracking():
 
 
 def test_bidirectional_fewer_nodes_than_bfs():
-    """Test Bidirectional BFS visits fewer nodes than regular BFS on a large open grid."""
+    """Test Bidirectional BFS visits fewer nodes than regular BFS on a large open grid.
+
+    On a 15×15 obstacle-free grid the two frontiers meet roughly halfway, so
+    each frontier only needs to cover half the search space.  This advantage
+    disappears on very small grids where the overhead of managing two queues
+    may actually increase node counts; the 15×15 size is chosen to ensure the
+    assertion holds reliably.
+    """
     grid = Grid(15, 15, 0.0, MovementMode.FOUR_DIRECTIONAL)
     start = (0, 0)
     goal = (14, 14)
