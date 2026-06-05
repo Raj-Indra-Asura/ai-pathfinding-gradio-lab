@@ -119,7 +119,10 @@ ai-pathfinding-gradio-lab/
     ├── 03_dijkstra_astar.ipynb
     ├── 04_heuristics.ipynb
     ├── 05_algorithm_comparison.ipynb
-    └── 06_learned_heuristics.ipynb
+    ├── 06_learned_heuristics.ipynb
+    ├── 07_visualization.ipynb
+    ├── 08_gradio_ui.ipynb
+    └── 11_polishing_testing.ipynb
 ```
 
 ## 🗺️ 12-Week Learning Roadmap
