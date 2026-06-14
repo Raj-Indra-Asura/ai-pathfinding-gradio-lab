@@ -367,7 +367,7 @@ Next week, we'll learn **Dijkstra's Algorithm**, which extends BFS to handle wei
 
 ## End-to-End Pipeline Connection
 
-Weeks 3 introduces the first complete search loop:
+Week 3 introduces the first complete search loop:
 
 ```text
 Grid → BFS/DFS → SearchResult → path + visited order → visualization and metrics
