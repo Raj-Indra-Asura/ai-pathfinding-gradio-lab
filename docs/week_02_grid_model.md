@@ -317,3 +317,55 @@ Next week, we'll implement our first pathfinding algorithms: **BFS (Breadth-Firs
 - **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)** - Full 12-week guide
 
 **➡️ [Continue to Week 3: BFS and DFS](week_03_bfs_dfs.md)** | **⬅️ [Back to Week 1](week_01_python_project_setup.md)** | **📖 [Back to Roadmap](../LEARNING_ROADMAP.md)**
+
+---
+
+## End-to-End Pipeline Connection
+
+The grid is the first real product component. Every algorithm, visualization, benchmark, and UI control depends on the grid behaving consistently.
+
+```text
+Gradio inputs → Grid(width, height, movement mode) → obstacles → neighbors → algorithms
+```
+
+### Why the Grid Controls Everything
+
+A pathfinding algorithm does not understand pictures or UI sliders. It only asks the grid simple questions:
+
+- Is this position inside the board?
+- Is this cell blocked?
+- Which neighbors can I move to?
+- How expensive is this move?
+
+If those answers are correct, BFS, Dijkstra, A*, visualization, and benchmarking all receive a reliable world model.
+
+### From User Input to Grid Object
+
+In the final product, the learner chooses values such as grid size, obstacle density, random seed, movement mode, start, and goal. The UI converts those raw values into a `Grid` object and obstacle set. That object becomes the shared input for every algorithm.
+
+The important handoff is:
+
+```text
+raw UI values → validated coordinates → Grid object → algorithm-ready map
+```
+
+### Grid Properties Needed by Later Weeks
+
+- Week 3 needs valid neighbors so BFS and DFS do not walk outside the grid or through walls.
+- Week 4 needs movement costs so Dijkstra can compare weighted paths.
+- Week 5 needs the same neighbors and costs so A* can combine real cost with heuristic estimates.
+- Week 7 needs obstacle, start, goal, path, and visited data so plots are readable.
+- Week 9 needs repeatable grids so benchmark comparisons are fair.
+
+### Testing Grid Correctness
+
+Before blaming an algorithm, test the grid manually:
+
+1. Pick a cell in the middle and list its neighbors.
+2. Add an obstacle next to it and confirm that neighbor disappears.
+3. Switch movement mode and confirm diagonal neighbors appear or disappear correctly.
+4. Check that start and goal are never treated as obstacles.
+
+### Week 2 Build Checkpoint
+
+You are ready for Week 3 when you can create a grid, add obstacles, explain row/column coordinates, and predict the neighbors of a cell before running code.

@@ -429,3 +429,49 @@ Next week, we'll dive deep into **Heuristic Functions**, learning:
 ---
 
 **Continue to Week 6: Heuristic Functions →**
+
+---
+
+## End-to-End Pipeline Connection
+
+A* turns the pathfinding product from exhaustive weighted search into guided search:
+
+```text
+Grid + start + goal + heuristic → A* → SearchResult → visualization + comparison metrics
+```
+
+The grid still provides legal movement and real costs. The heuristic adds an estimate of how far a candidate cell is from the goal.
+
+### Understanding g, h, and f in the Pipeline
+
+A* chooses what to explore using three values:
+
+- `g`: real cost from start to the current cell
+- `h`: estimated cost from the current cell to the goal
+- `f`: combined priority, usually `g + h`
+
+Dijkstra only uses `g`. Greedy Best-First mostly trusts `h`. A* balances both.
+
+### What the UI Should Help You See
+
+When A* works well, the visited region usually points toward the goal instead of expanding evenly in all directions. When the heuristic is weak, A* behaves more like Dijkstra. When the heuristic is too aggressive, it may become faster but risk path quality depending on the variant.
+
+Visualization is therefore not decoration; it is the easiest way to understand heuristic quality.
+
+### Step-by-Step Debugging
+
+For a small grid, trace A* manually:
+
+1. Put the start in the open set.
+2. Compute its heuristic to the goal.
+3. Pop the cell with the lowest `f` value.
+4. Add valid neighbors from the grid.
+5. Update a neighbor only if the new `g` cost is better.
+6. Stop when the goal is popped or no candidates remain.
+7. Reconstruct the path from parent links.
+
+If your output is wrong, check whether the bug is in real costs, heuristic values, priority ordering, or path reconstruction.
+
+### Week 5 Build Checkpoint
+
+You are ready for Week 6 when you can run A* with a heuristic, explain why it visits fewer cells than Dijkstra on many maps, and identify which part of the result proves that improvement.

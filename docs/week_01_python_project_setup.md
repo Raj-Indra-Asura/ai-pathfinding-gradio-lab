@@ -190,3 +190,59 @@ Next week, we'll dive into the grid model - the foundation of our pathfinding sy
 ---
 
 **➡️ [Continue to Week 2: Grid Model](week_02_grid_model.md)** | **📖 [Back to Roadmap](../LEARNING_ROADMAP.md)**
+
+---
+
+## End-to-End Pipeline Connection
+
+This week is not just about installing packages. It is the week where you make the whole learning pipeline possible.
+
+By the end of setup, you should be able to move through this first product loop:
+
+```text
+Open terminal → activate environment → install package → run tests → import code → launch app.py
+```
+
+That loop proves that later weeks can focus on pathfinding instead of fighting the environment.
+
+### What Week 1 Enables
+
+- `src/pathfinding_lab/` can be imported from tests, notebooks, and the app.
+- `pytest` can verify that grid and algorithm behavior stays correct as the project grows.
+- `app.py` can find the Gradio UI code and launch the product.
+- Development dependencies such as Ruff and pytest are available for Week 11 quality work.
+
+### First Full-System Smoke Test
+
+After installing the project, check three layers:
+
+1. **Package layer**: import `pathfinding_lab` without an error.
+2. **Test layer**: run the test suite and confirm pytest discovers tests.
+3. **Application layer**: start `python app.py` and verify the Gradio server launches.
+
+If all three work, you have a healthy foundation for every later week.
+
+### How to Think About the Repository
+
+The repository is arranged like a product, not like a single script:
+
+- `core/` defines shared data structures.
+- `algorithms/` searches the grid.
+- `heuristics/` helps informed algorithms make better choices.
+- `visualization/` explains results visually.
+- `metrics/` compares behavior objectively.
+- `ui/` connects everything to Gradio.
+- `tests/` protects the behavior while you improve the code.
+
+When you get lost, ask: "Which layer am I working in, and which layer consumes its output?"
+
+### Common Setup Problems That Break Later Weeks
+
+- If imports fail, later algorithm files cannot be tested.
+- If dependencies install globally instead of in the virtual environment, the app may work on one machine but fail on another.
+- If tests are not run from the repository root, pytest may not find the package correctly.
+- If editable install is skipped, local source changes may not appear during experimentation.
+
+### Week 1 Build Checkpoint
+
+You are ready for Week 2 when you can explain the difference between source code, tests, docs, and the app entry point, and when you can run the project from a clean terminal without guessing commands.

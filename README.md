@@ -125,6 +125,11 @@ ai-pathfinding-gradio-lab/
     └── 11_polishing_testing.ipynb
 ```
 
+
+### End-to-End Learning Pipeline
+
+For a start-to-finish explanation of how the app works, read **[docs/END_TO_END_PIPELINE.md](docs/END_TO_END_PIPELINE.md)**. It connects the weekly lessons into one product flow: setup → grid creation → algorithms → heuristics → visualization → Gradio UI → benchmarking → optional ML heuristic → final polish.
+
 ## 🗺️ 12-Week Learning Roadmap
 
 **📖 [Complete Learning Roadmap](LEARNING_ROADMAP.md)** - Your comprehensive guide with direct links to all resources!

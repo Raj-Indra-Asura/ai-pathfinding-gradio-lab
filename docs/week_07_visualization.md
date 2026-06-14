@@ -521,3 +521,57 @@ You'll learn how to create a web-based interface that makes your pathfinding lab
 ---
 
 **Continue to Week 8: Gradio UI →**
+
+---
+
+## End-to-End Pipeline Connection
+
+Visualization translates internal search data into learner understanding:
+
+```text
+Grid + SearchResult → color-coded plot → explanation in Gradio or notebooks
+```
+
+Without visualization, the project only reports numbers. With visualization, you can see why those numbers happened.
+
+### Visualization Pipeline Architecture
+
+A useful plot combines several layers:
+
+1. base grid cells
+2. obstacle cells
+3. visited cells in exploration order or as a highlighted region
+4. final path
+5. start and goal markers
+6. optional labels, legend, or title
+
+The visualization layer should read algorithm outputs, not recompute pathfinding logic.
+
+### How to Interpret Search Plots
+
+- A wide circular visited area usually means uninformed or weakly guided search.
+- A narrow band toward the goal usually means the heuristic is guiding search well.
+- A path that avoids obstacles but looks longer may be responding to movement costs.
+- Many visited nodes with no path means the algorithm proved the goal is unreachable.
+
+Learning to read these patterns helps you debug without stepping through every line.
+
+### Reproducible Visual Examples
+
+Use fixed random seeds when creating teaching examples. If the grid changes every run, it becomes harder to compare algorithms or explain why one result is better than another.
+
+A good educational visualization should be repeatable, labeled, and tied to a specific question such as "Why does A* visit fewer cells than Dijkstra here?"
+
+### Visualization Outputs for the Product
+
+The Gradio app can use visual outputs in several ways:
+
+- single algorithm plot
+- side-by-side comparison plot
+- benchmark chart
+- saved image for reports or portfolio documentation
+- animation or step-by-step teaching view
+
+### Week 7 Build Checkpoint
+
+You are ready for Week 8 when you can take a `SearchResult`, draw the path and visited cells, and explain what the plot teaches about the algorithm.

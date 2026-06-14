@@ -502,3 +502,57 @@ Visualization is key to understanding and debugging pathfinding algorithms!
 ---
 
 **Continue to Week 7: Visualization Techniques →**
+
+---
+
+## End-to-End Pipeline Connection
+
+Heuristics are plug-in decision helpers for informed algorithms:
+
+```text
+movement mode + goal position → heuristic function → A*/Greedy priority → visited nodes and runtime
+```
+
+A good heuristic improves the search pipeline without changing the grid, visualization, UI, or result format.
+
+### Choosing the Right Heuristic
+
+Use the movement rules to choose the heuristic:
+
+- 4-directional movement: Manhattan is usually the clearest match.
+- 8-directional movement with diagonal cost near 1: Chebyshev can be useful.
+- 8-directional movement with diagonal cost around sqrt(2): Octile is usually a strong fit.
+- Open geometric spaces: Euclidean is intuitive and easy to explain.
+- Speed-over-optimality experiments: weighted heuristics show the trade-off clearly.
+
+The key question is: "Does this estimate match what movement is actually allowed to do?"
+
+### Heuristic Impact on the Product
+
+Changing a heuristic can change:
+
+- how many cells A* visits
+- how quickly the search finishes
+- how direct the visible search pattern looks
+- whether weighted variants trade optimality for speed
+- how learners interpret algorithm behavior in the UI
+
+That means heuristics affect both performance and education.
+
+### Custom Heuristic Checklist
+
+Before using a custom heuristic in the product:
+
+1. It should accept the same position inputs as the existing heuristics.
+2. It should return a numeric estimate.
+3. It should be fast enough to call many times.
+4. It should not read or mutate UI state.
+5. If optimality matters, verify that it does not overestimate the true remaining cost.
+
+### Integration Example in Words
+
+The UI dropdown chooses a heuristic name. The app maps that name to a function. A* receives that function and calls it whenever it evaluates a neighbor. The returned estimate affects priority queue order. The final result records how much work the algorithm did, and visualization makes that work visible.
+
+### Week 6 Build Checkpoint
+
+You are ready for Week 7 when you can choose a heuristic for a movement mode and predict whether it will make A* focused, broad, fast, or risky.

@@ -380,3 +380,56 @@ Next week, we'll learn **A* Algorithm**, which combines Dijkstra's with heuristi
 ---
 
 **Continue to Week 5: A* Algorithm →**
+
+---
+
+## End-to-End Pipeline Connection
+
+Dijkstra adds cost awareness to the project pipeline:
+
+```text
+Grid movement costs → priority queue → lowest-cost path → SearchResult.path_cost → UI metrics
+```
+
+Before this week, "best path" usually meant fewest steps. After this week, "best path" means lowest total cost.
+
+### Cost Tracking Through the Product
+
+The algorithm maintains a cost for each reached position. That cost eventually becomes part of the result and can be displayed in the UI or compared in benchmarks.
+
+This is why path length and path cost must be treated as different metrics:
+
+- Path length answers: "How many cells are in the route?"
+- Path cost answers: "How expensive is the route according to movement rules?"
+
+A longer route can be better if it avoids expensive cells.
+
+### From BFS to Dijkstra to A*
+
+Dijkstra is the bridge between uninformed and informed weighted search:
+
+```text
+BFS: queue ordered by discovery time
+Dijkstra: priority queue ordered by real cost so far
+A*: priority queue ordered by real cost + estimated remaining cost
+```
+
+Understanding this progression makes Week 5 much easier. A* is not magic; it is Dijkstra with a goal-directed estimate added to the priority.
+
+### Movement Costs in Practice
+
+Movement cost rules belong in the grid layer, not inside Dijkstra. That separation keeps the algorithm reusable. The same Dijkstra code can work with simple 4-directional movement, diagonal movement, or future terrain costs.
+
+When debugging cost behavior, ask:
+
+1. What cost does the grid report for this move?
+2. Did Dijkstra update the position only when the new cost is lower?
+3. Does the final `path_cost` equal the sum of the movement costs?
+
+### Comparison Mindset
+
+On an unweighted grid, BFS and Dijkstra should often agree on path length. On a weighted grid, Dijkstra should be trusted for optimal cost while BFS may still minimize only step count.
+
+### Week 4 Build Checkpoint
+
+You are ready for Week 5 when you can explain priority queues, cost-so-far tracking, and why Dijkstra may visit many cells even though it is optimal.
