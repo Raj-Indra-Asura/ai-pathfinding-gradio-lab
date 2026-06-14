@@ -753,3 +753,60 @@ Keep exploring and building!
 ---
 
 **End of Week 10**
+
+---
+
+## End-to-End Pipeline Connection
+
+The learned heuristic is an optional experiment layered on top of the classical pipeline:
+
+```text
+generate training grids → compute target distances → extract features → train model → load model → estimate heuristic → run A*
+```
+
+This week is not replacing A*. It is teaching how ML can supply one piece of A*: the estimate of remaining cost.
+
+### End-to-End ML Pipeline
+
+A learned heuristic needs more steps than a hand-written distance formula:
+
+1. Generate many grid examples.
+2. Compute reliable target values, often using an optimal algorithm.
+3. Extract numeric features from positions, goals, and grid context.
+4. Train a model to predict distance or cost-to-go.
+5. Save the trained model.
+6. Load the model in the application.
+7. Wrap prediction in the same callable shape as other heuristics.
+8. Pass that callable into A*.
+9. Compare quality and speed against classical heuristics.
+
+Every step must be correct before the learned heuristic is meaningful.
+
+### Feature Engineering Mindset
+
+Features are the information the model can see. If the model only sees start and goal coordinates, it may learn geometric distance but not obstacle difficulty. If it sees local obstacle density or map structure, it may learn more useful estimates but inference can become slower.
+
+The product trade-off is:
+
+```text
+more features → potentially smarter estimates → more computation and more complexity
+```
+
+### UI Integration Pattern
+
+A UI can expose the learned heuristic as an advanced option. The callback should handle missing model files gracefully and fall back to a classical heuristic with a clear message.
+
+Learners should understand whether they are using Manhattan, Octile, Weighted, or a model-based estimate.
+
+### Evaluating a Learned Heuristic
+
+Compare it with classical heuristics using Week 9 metrics:
+
+- Does it reduce visited nodes?
+- Does it preserve path quality?
+- Is prediction overhead larger than the search savings?
+- Does it generalize to maps different from the training set?
+
+### Week 10 Build Checkpoint
+
+You are ready for Week 11 when you can explain the difference between training-time work, saved model artifacts, and runtime heuristic inference inside A*.

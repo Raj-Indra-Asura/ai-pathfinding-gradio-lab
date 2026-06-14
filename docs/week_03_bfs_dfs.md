@@ -362,3 +362,46 @@ Next week, we'll learn **Dijkstra's Algorithm**, which extends BFS to handle wei
 - **📖 [Learning Roadmap](../LEARNING_ROADMAP.md)** - Full 12-week guide
 
 **➡️ [Continue to Week 4: Dijkstra's Algorithm](week_04_dijkstra.md)** | **⬅️ [Back to Week 2](week_02_grid_model.md)** | **📖 [Back to Roadmap](../LEARNING_ROADMAP.md)**
+
+---
+
+## End-to-End Pipeline Connection
+
+Weeks 3 introduces the first complete search loop:
+
+```text
+Grid → BFS/DFS → SearchResult → path + visited order → visualization and metrics
+```
+
+BFS and DFS are the simplest algorithms in the product, so they are the best place to understand the contract every later algorithm should follow.
+
+### The SearchResult Handoff
+
+The UI and visualization layers should not need to know whether a path came from BFS, DFS, Dijkstra, or A*. They should receive a consistent result containing the final path, visited cells, path length, runtime, and success state.
+
+This matters because Week 7 can draw any algorithm result if the result shape is consistent, and Week 9 can benchmark every algorithm with the same metric fields.
+
+### What BFS Teaches the Product
+
+BFS proves that the grid and path reconstruction logic work on unweighted maps. If BFS cannot find the expected path on a simple grid, fix the grid or reconstruction before moving to harder algorithms.
+
+BFS is also the baseline for correctness: on unweighted 4-directional grids, it should find a shortest path by number of steps.
+
+### What DFS Teaches the Product
+
+DFS shows that a valid path is different from an optimal path. In the Gradio app, this distinction becomes visible: DFS may reach the goal, but it can explore deeply in an inefficient direction or return a longer route.
+
+That visual difference prepares you for Week 9 comparisons.
+
+### Debugging Search Behavior
+
+When a search result looks wrong, inspect these values in order:
+
+1. `visited`: prevents repeated work and infinite loops.
+2. `came_from` or parent tracking: controls path reconstruction.
+3. neighbor order: influences DFS path shape and BFS tie-breaking.
+4. success/no-path handling: keeps the UI from crashing.
+
+### Week 3 Build Checkpoint
+
+You are ready for Week 4 when you can explain why BFS finds shortest unweighted paths, why DFS does not guarantee shortest paths, and how visited nodes become a teaching visualization.

@@ -542,3 +542,56 @@ This combines classical pathfinding with modern ML techniques!
 ---
 
 **Continue to Week 10: ML Heuristics →**
+
+---
+
+## End-to-End Pipeline Connection
+
+Benchmarking turns individual pathfinding runs into evidence:
+
+```text
+scenario definitions → repeated algorithm runs → collected SearchResults → tables/charts → algorithm recommendations
+```
+
+The goal is not just to find which algorithm is fastest once. The goal is to understand which algorithm is reliable for a class of maps.
+
+### Benchmark Data Pipeline
+
+A benchmark should record enough information to explain the result later:
+
+- grid size
+- obstacle density
+- movement mode
+- random seed or scenario name
+- algorithm name
+- heuristic name when relevant
+- success or failure
+- path length and path cost
+- nodes visited
+- runtime
+
+With those fields, you can export results, compare regressions, and justify algorithm choices.
+
+### Fair Comparison Rules
+
+For fair benchmarks:
+
+1. Run algorithms on the same grid.
+2. Use the same start and goal.
+3. Use fixed seeds for random obstacles.
+4. Repeat runs when timing noise matters.
+5. Separate correctness metrics from speed metrics.
+
+A fast algorithm that fails to find a path is not better than a slower algorithm that succeeds.
+
+### How Benchmarks Feed the Product
+
+Benchmark results can guide UI explanations. For example, after running all algorithms, the app can explain that BFS is strong on unweighted grids, Dijkstra is reliable for weighted costs, and A* often reduces visited nodes when paired with a suitable heuristic.
+
+### Regression Thinking
+
+As you polish the project, benchmark outputs become guardrails. If a refactor makes A* visit twice as many nodes on the same scenario, investigate before accepting the change.
+
+### Week 9 Build Checkpoint
+
+You are ready for Week 10 when you can design a repeatable scenario, run multiple algorithms on it, and explain the result using both plots and metrics.

@@ -840,3 +840,62 @@ Start brainstorming ideas now!
 ---
 
 **Continue to Week 12: Capstone Project →**
+
+---
+
+## End-to-End Pipeline Connection
+
+Polishing protects the full product pipeline:
+
+```text
+unit tests → integration tests → lint/type checks → docs → stable learner experience
+```
+
+At this stage, the project already has many moving parts. Quality work ensures that improving one layer does not quietly break another.
+
+### Testing the Full Workflow
+
+Unit tests check small pieces, but integration tests protect the product story. Useful integration workflows include:
+
+- create grid → run BFS → validate path starts and ends correctly
+- create weighted grid → run Dijkstra → validate path cost
+- run A* with a heuristic → compare visited nodes with Dijkstra on a known scenario
+- run visualization on a result → confirm a figure is produced
+- run benchmark helper → confirm a comparison table contains every algorithm
+
+These tests match how a learner actually uses the project.
+
+### Documentation as Part of Quality
+
+Docs are not separate from code quality in an educational repo. A function with unclear inputs creates learner confusion even if tests pass.
+
+For public functions, document:
+
+- what the function expects
+- what it returns
+- whether it mutates state
+- how errors or no-path cases are represented
+- which week or concept it supports
+
+### Quality Metrics to Track
+
+A polished project can report:
+
+- passing tests
+- lint status
+- type-check status when applicable
+- benchmark stability
+- docs coverage for important modules
+- known limitations
+
+These metrics help you know whether the final project is ready to share.
+
+### Refactor Safely
+
+When refactoring, keep public contracts stable. If algorithm result fields change, visualization, metrics, UI, docs, and tests may all need updates.
+
+Before changing a shared object, ask: "Which layers consume this?"
+
+### Week 11 Build Checkpoint
+
+You are ready for Week 12 when tests protect the main workflows, docs explain the important APIs, and the app can be demonstrated without hidden setup knowledge.

@@ -20,6 +20,19 @@ Each week follows this pattern:
 2. Begin with [Week 1 Documentation](docs/week_01_python_project_setup.md)
 3. Follow the weekly progression below
 
+
+## 🔗 End-to-End Pipeline Guide
+
+Before or during the weekly lessons, keep the **[End-to-End Project Pipeline Guide](docs/END_TO_END_PIPELINE.md)** open. It explains how every weekly component connects into the final Gradio pathfinding product.
+
+The project builds in this order:
+
+```text
+setup → grid → search algorithms → weighted costs → heuristics → visualization → UI → benchmarks → ML heuristic → polish → final integration
+```
+
+Use the guide whenever you ask, "How does this week's code connect to the complete app?"
+
 ## 📅 12-Week Learning Path
 
 ---

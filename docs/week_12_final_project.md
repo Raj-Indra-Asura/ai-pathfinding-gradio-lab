@@ -918,3 +918,76 @@ These skills transfer to any software engineering domain. Well done!
 ---
 
 **End of 12-Week Course**
+
+---
+
+## End-to-End Pipeline Connection
+
+Week 12 is the complete product rehearsal. You should now be able to explain and rebuild the whole system:
+
+```text
+install → test → launch UI → generate grid → run algorithms → visualize → benchmark → polish → share
+```
+
+### Complete Data Flow Walkthrough
+
+For the final demo, describe each stage clearly:
+
+1. The user launches `app.py`.
+2. The app creates the Gradio interface.
+3. The learner configures grid parameters.
+4. The UI validates start, goal, movement mode, and obstacle choices.
+5. The core grid layer creates the map.
+6. The algorithm layer searches the map.
+7. The heuristic layer guides informed algorithms when selected.
+8. The result object captures path, visited order, cost, and timing.
+9. The visualization layer turns the result into a plot.
+10. The metrics layer compares results when benchmarking.
+11. The UI displays the final explanation.
+
+This is the story your portfolio project should tell.
+
+### Final Integration Checklist
+
+Before calling the project complete, confirm:
+
+- setup instructions work from a clean environment
+- tests pass
+- all weekly docs link to the next learning step
+- the UI can demonstrate at least one simple, one blocked, and one complex scenario
+- algorithm comparisons use the same grid
+- no-path cases are explained instead of treated as crashes
+- benchmarks are reproducible with fixed seeds
+- optional ML features are clearly marked as optional
+- limitations and next steps are documented
+
+### Troubleshooting the Final Product
+
+When something breaks in the final demo, isolate the layer:
+
+- Setup issue: reproduce with install and import commands.
+- Grid issue: print dimensions, obstacles, start, goal, and neighbors.
+- Algorithm issue: test on a tiny known grid.
+- Heuristic issue: compare against Dijkstra or a simpler heuristic.
+- Visualization issue: inspect the `SearchResult` before plotting.
+- UI issue: call the underlying function directly outside Gradio.
+- Benchmark issue: fix random seed and reduce scenario size.
+
+### How to Present the Project
+
+A strong presentation follows the same order as the pipeline:
+
+1. Show the problem: finding paths through obstacles.
+2. Show the grid abstraction.
+3. Show simple search with BFS/DFS.
+4. Show weighted search with Dijkstra.
+5. Show guided search with A* and heuristics.
+6. Show visualization so the audience understands behavior.
+7. Show Gradio as the interactive wrapper.
+8. Show benchmarks to support algorithm choices.
+9. Mention learned heuristics as an advanced experiment.
+10. Close with tests, docs, limitations, and future improvements.
+
+### Week 12 Completion Standard
+
+You are finished when you can rebuild the project step by step from memory, explain the role of every package directory, and demonstrate how one user action flows through the full system.

@@ -406,3 +406,57 @@ You'll learn how to rigorously evaluate algorithm performance across different s
 ---
 
 **Continue to Week 9: Benchmarking →**
+
+---
+
+## End-to-End Pipeline Connection
+
+Week 8 connects the learning project into an interactive product:
+
+```text
+controls → validation → grid creation → algorithm dispatch → visualization → metrics display
+```
+
+This is where separate modules become an application a learner can use.
+
+### Gradio Application Architecture
+
+A clear Gradio callback should do five jobs in order:
+
+1. read raw control values
+2. validate and convert them into project types
+3. call the core/algorithm functions
+4. convert results into plots and tables
+5. return user-friendly outputs
+
+Keep algorithm logic out of the UI layer. The UI should orchestrate the pipeline, not contain the pathfinding implementation.
+
+### State Management Mindset
+
+The app often needs to generate a grid once and run several algorithms on it. That means grid state matters. If the grid changes between runs without the learner realizing it, comparisons become unfair.
+
+For reliable comparisons:
+
+- reuse the same generated grid
+- preserve start and goal positions
+- keep random seed visible
+- clearly regenerate only when the user asks
+
+### Error Handling for Learners
+
+Good UI errors should explain the next action:
+
+- Start or goal outside grid: ask the learner to choose valid coordinates.
+- Start or goal on an obstacle: regenerate or move the point.
+- No path found: show the explored region and explain that obstacles block all routes.
+- Very large grid is slow: suggest reducing size or obstacle density.
+
+### Comparison Mode Pipeline
+
+Comparison mode should run multiple algorithms on the same grid, collect each `SearchResult`, and display a table with path length, path cost, nodes visited, runtime, and success.
+
+This directly prepares learners for Week 9 benchmarking.
+
+### Week 8 Build Checkpoint
+
+You are ready for Week 9 when you can use the UI to generate one grid, run at least two algorithms on it, compare their plots and metrics, and explain the difference.
