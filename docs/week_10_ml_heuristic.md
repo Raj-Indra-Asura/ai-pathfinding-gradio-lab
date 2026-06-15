@@ -29,6 +29,64 @@ By the end of this week, you will understand:
 
 ## Theory
 
+## Build the Intuition: What Is a Learned Heuristic?
+
+> **Read this first.** This whole week is an **experiment**, and the honest headline is: for
+> general grid pathfinding, a learned heuristic is **usually *worse* than plain Manhattan
+> distance** — slower to compute and not guaranteed to give optimal paths. We do it anyway
+> because *understanding why it underperforms* teaches you more about heuristics, machine
+> learning, and admissibility than another tidy success story would.
+
+### The Four Words You Need
+
+A "learned heuristic" just swaps the *hand-written formula* `h(n)` for a *trained model* `h(n)`.
+To read the rest of the week, you only need four ML terms, all in pathfinding language:
+
+- **Feature** — a number that describes a situation. For us, the features of a cell are its
+  Manhattan distance to the goal, its Euclidean distance to the goal, the number of obstacles
+  roughly on the straight line to the goal, and the local obstacle density near the start and
+  near the goal. Features are the *inputs* the model looks at.
+- **Training set** — a big table of examples where we already know the *right answer*. We
+  generate it by running Dijkstra to get the **true** distance-to-goal for thousands of cells.
+  Each row is `(features → true distance)`.
+- **Prediction** — what the trained model outputs for a *new* cell it didn't see during
+  training: its guess at the distance to the goal. That guess becomes `h(n)`.
+- **R²** (the "coefficient of determination") — a score from `≤ 0` to `1.0` measuring how well
+  the model's predictions match reality on held-out data. `1.0` is perfect; `0` is no better
+  than always guessing the average. R² of, say, `0.95` sounds great — but watch the next point.
+
+### One Example Where ML Helps, One Where It Hurts
+
+- **Helps:** a game that reuses the *same* maze every match. The true distance-to-goal has a
+  fixed, learnable shape (obstacles always in the same place). A model trained on that one map
+  can capture "you must detour around the big wall," information that geometric Manhattan
+  distance simply doesn't know. Here the model can guide A* using *fewer* node expansions.
+- **Hurts:** general, random grids (our default). The model only ever *approximates* the true
+  cost, so it sometimes **overestimates** — which makes it **inadmissible** and can cause A* to
+  return a longer-than-optimal path. Even when it underestimates, each prediction is
+  100–1000× slower than Manhattan's two subtractions. Net result: slower *and* sometimes wrong.
+  A high R² does **not** rescue this, because admissibility needs `h(n) ≤ h*(n)` *everywhere*,
+  and "good on average" still overestimates somewhere.
+
+### The Three scikit-learn / stdlib Tools, One Paragraph Each
+
+- **`train_test_split`** (scikit-learn) splits your generated data into a *training* portion the
+  model learns from and a *test* portion it never sees during training. You score R² on the test
+  portion so the number reflects performance on *new* cells, not memorized ones — otherwise you'd
+  fool yourself with an optimistic score.
+- **`RandomForestRegressor`** (scikit-learn) is the model we train. A "random forest" averages
+  the answers of many small decision trees, each trained on a random slice of the data. It
+  predicts a continuous number (a *regressor*), which is exactly what a distance estimate is, and
+  it handles non-linear feature interactions without much tuning — a sensible default for a first
+  experiment.
+- **`pickle`** (Python standard library) saves the trained model to a file (*serialization*) and
+  loads it back later, so you train once and reuse the model at search time instead of retraining
+  on every run. ⚠️ Only `pickle.load` files you trust — unpickling runs arbitrary code, so never
+  load a model file from an untrusted source.
+
+With those ideas in hand, the detailed theory below will make sense even if you've never touched
+machine learning before.
+
 ### What are Learned Heuristics?
 
 A **learned heuristic** is a heuristic function that uses machine learning to predict the distance from a given position to the goal, rather than using a mathematical formula like Manhattan or Euclidean distance.

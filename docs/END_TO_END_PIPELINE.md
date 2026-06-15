@@ -60,6 +60,23 @@ Typical result information:
 
 This is the handoff point between algorithm logic and product behavior.
 
+### A Note on `Node` and `CellType` (Reference Types)
+
+For speed, **the algorithms operate on lightweight `(row, col)` tuples**, not on `Node` objects.
+Positions are stored in sets, dictionaries (`cost_so_far[(row, col)]`), and heaps because tuples
+are tiny, hashable, and fast in a tight search loop.
+
+- **`Node`** (`core/node.py`) is an *illustrative / optional* dataclass that bundles a position
+  with its `g`, `h`, `f` costs and `parent`. It's useful for *explaining* how A* reasons, but the
+  algorithms in this repo track those costs in separate dictionaries instead — so you won't find
+  `Node` inside the algorithm loops, and that's intentional.
+- **`CellType`** (`core/types.py`) is an enum for *describing and coloring* cells (EMPTY,
+  OBSTACLE, START, GOAL, VISITED, PATH), used mainly around visualization rather than inside the
+  search.
+
+The mental model the docs teach therefore matches the code: **positions are tuples**; `Node` and
+`CellType` are reference helpers. (Week 2 explains this in more depth.)
+
 ## Week-by-Week Product Build
 
 | Week | Product component added | What you should be able to build by the end |

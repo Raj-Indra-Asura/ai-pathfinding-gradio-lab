@@ -187,6 +187,53 @@ f(n) = g(n) + w × h(n)
 - Large maps where optimal search is too slow
 - Initial pathfinding passes (use weighted A*, then refine)
 
+## Build the Intuition: Deriving Octile Distance From a Picture
+
+Before the code, derive the octile formula yourself from one labeled example. We want the
+shortest distance from **S** to **G** when diagonal moves are allowed (8-directional), a straight
+move costs `1`, and a diagonal move costs `√2 ≈ 1.414`.
+
+```text
+        col 0   1   2   3
+row 0  [ S ] .    .    .
+row 1   .   [1]   .    .
+row 2   .    .   [2]  [ G ]
+```
+
+Path: two **diagonal** moves `S → [1] → [2]`, then one **straight** move `[2] → G`.
+
+From `S = (0,0)` to `G = (2,3)`:
+
+- `dx = |2 - 0| = 2`  (rows apart)
+- `dy = |3 - 0| = 3`  (columns apart)
+
+Derive the cost in **two steps**:
+
+1. **Take as many diagonal moves as possible.** Each diagonal move covers *one row and one
+   column at once*, so you can make `min(dx, dy) = min(2, 3) = 2` diagonals. Those 2 diagonal
+   moves (cells `[1]` and `[2]`) cover 2 rows and 2 columns, landing on `(2, 2)`. Cost so far:
+   `2 × √2`.
+2. **Walk straight for whatever is left.** You still need to cover the leftover difference
+   `|dx − dy| = |2 − 3| = 1` column — that is `1` straight move into `G`. Cost: `1 × 1`.
+
+**Total = `2 × √2 + 1 × 1 = 1 + 2√2 ≈ 3.83`.**
+
+Now map each term to the formula in `octile.py`:
+
+```text
+octile = max(dx, dy) + (√2 − 1) × min(dx, dy)
+```
+
+- `min(dx, dy)` → the number of **diagonal** moves.
+- `(√2 − 1) × min(dx, dy)` → the *extra* cost of making those moves diagonal instead of straight
+  (each diagonal costs `√2` rather than `1`, i.e. `√2 − 1` more).
+- `max(dx, dy)` → the cost if you walked *every* step straight; the diagonals then refund part of
+  it via the term above.
+
+Check against our example: `max(2,3) + (√2 − 1)·min(2,3) = 3 + (√2 − 1)·2 = 3 + 2√2 − 2 =
+1 + 2√2`. ✅ Same answer. This is why octile is the *exact* shortest distance on an open
+8-directional grid — and therefore an excellent admissible heuristic for that movement mode.
+
 ## Code Walkthrough
 
 ### Manhattan Distance Implementation

@@ -93,6 +93,32 @@ We use a **Set** for fast O(1) obstacle lookup:
 obstacles = {(2, 3), (2, 4), (2, 5)}  # Blocked cells
 ```
 
+### What the Algorithms Actually Pass Around: `(row, col)` Tuples
+
+This is the single most important thing to internalize before Week 3, because it prevents a lot
+of confusion later:
+
+> **The search algorithms operate directly on lightweight `(row, col)` tuples — not on `Node`
+> objects.** Open `algorithms/bfs.py`, `dijkstra.py`, or `astar.py` and you'll see them store
+> positions in sets, dicts (`cost_so_far[(row, col)]`), and heaps. Plain tuples are tiny, fast,
+> hashable, and free to copy, which is exactly what a hot search loop wants.
+
+So what about `Node` and `CellType`?
+
+- **`Node`** (`core/node.py`) is a **reference / illustrative type**. It bundles a position with
+  `g_cost`, `h_cost`, `f_cost`, and a `parent`, and it's a great way to *read about* how A*
+  thinks (see Week 0 on dataclasses and dunder methods). But the algorithms in this repo track
+  those costs in separate dictionaries instead, so **you will not find `Node` inside the
+  algorithm loops** — and that's intentional, not a missing piece.
+- **`CellType`** (`core/types.py`) is an **enum used for describing/coloring cells** (EMPTY,
+  OBSTACLE, START, GOAL, VISITED, PATH), mainly handy for visualization and explanation. The grid
+  itself stores obstacles as a set of positions and a NumPy array of `0`/`1`, not as `CellType`
+  values.
+
+**Mental model:** positions are tuples; `Node` and `CellType` are optional helper/reference types
+that make the *concepts* concrete. If you're hunting for `Node` inside Dijkstra, stop — the
+algorithms deliberately keep it simple with tuples and dictionaries.
+
 ## Code Walkthrough
 
 Let's examine the Grid class implementation (`src/pathfinding_lab/core/grid.py`):

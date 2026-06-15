@@ -158,9 +158,56 @@ For all neighbors n' of n
 
 **Key Insight**: A* is Dijkstra's guided by a heuristic!
 
-## Code Walkthrough
+## Build the Intuition: Why `f = g + h` Orders Exploration Sensibly
 
-### A* Implementation (`src/pathfinding_lab/algorithms/astar.py`)
+Trace A* **by hand** on the simplest possible map: three cells in a line, 4-directional, every
+move costs 1.
+
+```text
+[S]---[M]---[G]
+(0,0) (0,1) (0,2)
+```
+
+Use **Manhattan distance** to the goal as the heuristic `h`:
+
+- `h(S) = |0-0| + |0-2| = 2`
+- `h(M) = 1`
+- `h(G) = 0`
+
+Remember the three quantities: `g` = real cost from the start, `h` = *estimated* remaining cost
+to the goal, and `f = g + h` = estimated total cost of a path going through this cell. A* always
+expands the smallest `f` first.
+
+| Step | Pop (lowest `f`) | `g` | `h` | `f = g + h` | Push neighbors |
+| --- | --- | --- | --- | --- | --- |
+| 1 | `S` | 0 | 2 | **2** | `M`: g=1, h=1, f=2 |
+| 2 | `M` | 1 | 1 | **2** | `G`: g=2, h=0, f=2 |
+| 3 | `G` | 2 | 0 | **2** | goal reached, cost 2 |
+
+Notice `f` stays **2** the whole way down the optimal path. That is the point: `g` rises by 1 at
+each step while `h` falls by 1, so their sum tracks the *true* total cost of the best route. Now
+imagine a detour cell `U = (1,0)` hanging off the line. It has `g(U) = 1` but
+`h(U) = |1-0| + |0-2| = 3`, giving `f(U) = 4`. Because `4 > 2`, A* explores `U` **last** — the
+heuristic correctly tells A* that `U` leads away from the goal. Dijkstra, using only `g`, would
+have treated `U` and `M` as equally promising (both `g = 1`).
+
+### True Cost `h*` and Admissibility
+
+Define **`h*(n)`** as the *true* optimal remaining cost from `n` to the goal. On our line,
+`h*(S) = 2` and `h*(M) = 1` — here Manhattan equals `h*` exactly.
+
+A heuristic is **admissible** when it **never overestimates**: `h(n) ≤ h*(n)` for every cell.
+Admissibility is what guarantees A* returns an optimal path.
+
+**A concrete over-estimate that breaks optimality.** Suppose we cheated and set `h(M) = 10`
+(way above its true cost of 1). Then `f(M) = g + h = 1 + 10 = 11`. A* would now treat the one
+cell on the only optimal path as terrible and avoid it, expanding every *other* cell first. If
+any longer route happened to have a smaller `f`, A* would return that longer route — a
+**sub-optimal** answer. This is exactly why heuristics like Manhattan (which underestimate or
+match `h*`) are safe, while inflated heuristics are not. Keep this trace in mind as you read the
+implementation below.
+
+## Code Walkthrough
 
 #### 1. Initialization
 
