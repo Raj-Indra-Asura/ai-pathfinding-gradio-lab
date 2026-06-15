@@ -4,7 +4,7 @@
 
 ---
 
-## Exercise 1: Custom Heuristic Evaluator (Beginner)
+## Exercise 1: Custom Heuristic Evaluator (Intermediate)
 
 ### Explanation
 

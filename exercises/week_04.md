@@ -4,9 +4,36 @@
 
 ---
 
+**🔑 Concepts/links you'll need:** `heapq` & `float('inf')` ([Week 0 §8](../docs/week_00_python_prerequisites.md#prereq-deque-heapq-inf)); dicts for `cost_so_far` ([Week 0 §2](../docs/week_00_python_prerequisites.md#prereq-collections)); why a priority queue needs ordering ([Week 0 §5](../docs/week_00_python_prerequisites.md#prereq-dunder)).
+
 ## Overview
 
 These exercises will help you master Dijkstra's algorithm for weighted pathfinding. You'll implement priority queue operations, understand cost-based exploration, and debug common issues.
+
+## Warm-up Exercise (Trivial)
+
+### Task: Watch a Priority Queue Pop Cheapest-First
+
+Dijkstra's whole engine is a `heapq`. Before implementing anything, prove to yourself that a heap
+always hands back the smallest item first.
+
+```python
+import heapq
+
+pq = []
+heapq.heappush(pq, (5.0, (2, 2)))
+heapq.heappush(pq, (1.0, (0, 1)))
+heapq.heappush(pq, (3.0, (1, 0)))
+
+while pq:
+    cost, position = heapq.heappop(pq)
+    print(f"popped cost={cost} at {position}")
+```
+
+**You're done when** you can predict the print order *before* running it (cheapest cost first).
+*(New to `heapq`? See [Week 0 §8](../docs/week_00_python_prerequisites.md#prereq-deque-heapq-inf).)*
+
+---
 
 ## Exercise 1: Priority Queue Cost Tracker (Beginner)
 

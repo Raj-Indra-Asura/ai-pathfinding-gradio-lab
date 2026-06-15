@@ -4,6 +4,8 @@
 
 ---
 
+**🔑 Concepts/links you'll need:** heuristics are plain functions over positions ([Week 0 §7](../docs/week_00_python_prerequisites.md#prereq-typehints)); tuples & unpacking ([Week 0 §1](../docs/week_00_python_prerequisites.md#prereq-tuples)); basic math (`abs`, `sqrt`, `min`/`max`) — [math module](https://docs.python.org/3/library/math.html).
+
 ## Beginner Exercise: Distance Metric Calculator
 
 ### Task

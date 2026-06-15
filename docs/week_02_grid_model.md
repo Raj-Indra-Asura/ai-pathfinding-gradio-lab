@@ -4,6 +4,20 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 2** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — the grid model every later layer reads.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- Tuples & the `(row, col)` `Position` convention — [Week 0 §1](week_00_python_prerequisites.md#prereq-tuples).
+- Sets vs lists vs dicts and what "O(1) fast lookup" means — [Week 0 §2](week_00_python_prerequisites.md#prereq-collections).
+- Classes & `self` (enough to read `Grid`) — [Week 0 §3](week_00_python_prerequisites.md#prereq-classes).
+- Enums like `MovementMode` — [Week 0 §6](week_00_python_prerequisites.md#prereq-enums).
+- How to *read* type hints — [Week 0 §7](week_00_python_prerequisites.md#prereq-typehints).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will:
@@ -78,6 +92,32 @@ We use a **Set** for fast O(1) obstacle lookup:
 ```python
 obstacles = {(2, 3), (2, 4), (2, 5)}  # Blocked cells
 ```
+
+### What the Algorithms Actually Pass Around: `(row, col)` Tuples
+
+This is the single most important thing to internalize before Week 3, because it prevents a lot
+of confusion later:
+
+> **The search algorithms operate directly on lightweight `(row, col)` tuples — not on `Node`
+> objects.** Open `algorithms/bfs.py`, `dijkstra.py`, or `astar.py` and you'll see them store
+> positions in sets, dicts (`cost_so_far[(row, col)]`), and heaps. Plain tuples are tiny, fast,
+> hashable, and free to copy, which is exactly what a hot search loop wants.
+
+So what about `Node` and `CellType`?
+
+- **`Node`** (`core/node.py`) is a **reference / illustrative type**. It bundles a position with
+  `g_cost`, `h_cost`, `f_cost`, and a `parent`, and it's a great way to *read about* how A*
+  thinks (see Week 0 on dataclasses and dunder methods). But the algorithms in this repo track
+  those costs in separate dictionaries instead, so **you will not find `Node` inside the
+  algorithm loops** — and that's intentional, not a missing piece.
+- **`CellType`** (`core/types.py`) is an **enum used for describing/coloring cells** (EMPTY,
+  OBSTACLE, START, GOAL, VISITED, PATH), mainly handy for visualization and explanation. The grid
+  itself stores obstacles as a set of positions and a NumPy array of `0`/`1`, not as `CellType`
+  values.
+
+**Mental model:** positions are tuples; `Node` and `CellType` are optional helper/reference types
+that make the *concepts* concrete. If you're hunting for `Node` inside Dijkstra, stop — the
+algorithms deliberately keep it simple with tuples and dictionaries.
 
 ## Code Walkthrough
 

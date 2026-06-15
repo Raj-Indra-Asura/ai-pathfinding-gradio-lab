@@ -4,6 +4,19 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 1** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — a local development environment so tests, imports, and the app all run.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- Basic Python — variables, functions, loops, `if` (assumed for the whole course).
+- Running commands in a terminal and using `pip` / virtual environments — [venv & pip primer](https://realpython.com/python-virtual-environments-a-primer/).
+- What a Python *package* and `import` are — [Week 0 overview](week_00_python_prerequisites.md).
+- `try/except` (used in this week's exercise) — [Week 0 §9](week_00_python_prerequisites.md#prereq-tryexcept).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will:
@@ -135,15 +148,55 @@ Run with: `pytest`
    pip install -r requirements.txt
    ```
 
-4. **Run tests**
+4. **Install this project as an editable package (REQUIRED)**
+   ```bash
+   pip install -e .
+   ```
+   This project uses a `src/` layout, so `pathfinding_lab` lives under `src/`.
+   The editable install tells Python where to find it, so `import pathfinding_lab`
+   works in tests, notebooks, and `app.py`. Skip it and you will hit
+   `ModuleNotFoundError: No module named 'pathfinding_lab'`.
+
+5. **Run tests**
    ```bash
    pytest
    ```
 
-5. **Verify installation**
+6. **Verify installation**
    ```bash
    python -c "import gradio; print(gradio.__version__)"
    ```
+
+### One-Command Smoke Test
+
+Before moving on to Week 2, confirm all three layers of the project are healthy.
+Run these in order from the repository root:
+
+```bash
+# 1. Package layer: the package imports
+python -c "import pathfinding_lab; print(pathfinding_lab.__version__)"
+
+# 2. Test layer: the tests pass
+pytest
+
+# 3. Application layer: the app launches
+python app.py
+```
+
+**Expected success output:**
+- Step 1 prints a version number such as `0.1.0`.
+- Step 2 ends with a green summary line like `==== 49 passed in 0.9s ====`.
+- Step 3 prints `Running on local URL:  http://127.0.0.1:7860` (press `Ctrl+C` to stop the server).
+
+If all three succeed, your setup is healthy and every later week will work.
+
+### Troubleshooting: The Three Most Common Week 1 Errors
+
+| Symptom | Likely cause | Fix |
+| --- | --- | --- |
+| `ModuleNotFoundError: No module named 'pathfinding_lab'` | The editable install was skipped (or run in a different environment). | Run `pip install -e .` from the repository root, inside your activated venv. |
+| Packages "installed" but Python still can't find them | Wrong Python interpreter (system Python instead of the venv). | Activate the venv, then check with `which python` (Linux/Mac) or `where python` (Windows) — it should point inside `venv/`. |
+| `pytest` reports "no tests ran" or import errors | Running `pytest` from the wrong directory. | `cd` to the repository root (the folder containing `pyproject.toml`) and run `pytest` there. |
 
 ### Success Criteria
 - ✅ Virtual environment activated

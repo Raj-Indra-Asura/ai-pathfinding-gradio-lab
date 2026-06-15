@@ -4,6 +4,8 @@
 
 ---
 
+**🔑 Concepts/links you'll need:** `SearchResult` metrics (a dataclass) ([Week 0 §4](../docs/week_00_python_prerequisites.md#prereq-dataclasses)); pandas — [10 minutes to pandas](https://pandas.pydata.org/docs/user_guide/10min.html); dicts/lists for aggregation ([Week 0 §2](../docs/week_00_python_prerequisites.md#prereq-collections)).
+
 ## Exercise 1: Basic Algorithm Benchmarking (Beginner)
 
 **Goal**: Create a simple benchmarking script that compares BFS and A* on a single grid.

@@ -27,7 +27,38 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Install this project as an editable package (REQUIRED)
+pip install -e .
 ```
+
+> **Why `pip install -e .` is required:** this project uses a `src/` layout, so the
+> `pathfinding_lab` package lives under `src/` rather than in the repository root.
+> The editable install (`-e`) tells Python where to find it, so `import pathfinding_lab`
+> works everywhere (tests, notebooks, and `app.py`) while still picking up your local
+> edits immediately. **If you skip this step you will get `ModuleNotFoundError: No module
+> named 'pathfinding_lab'`.**
+
+### Smoke Test (confirm a healthy setup)
+
+Run these three checks in order before starting Week 1. They verify the package,
+the test suite, and the app all work:
+
+```bash
+# 1. Package layer: the package imports
+python -c "import pathfinding_lab; print(pathfinding_lab.__version__)"
+
+# 2. Test layer: the tests pass
+pytest
+
+# 3. Application layer: the app launches
+python app.py
+```
+
+**Expected success output:**
+- Step 1 prints a version number such as `0.1.0`.
+- Step 2 ends with a green line like `==== NN passed in N.NNs ====`.
+- Step 3 prints `Running on local URL:  http://127.0.0.1:7860` (press `Ctrl+C` to stop).
 
 ### Running the Application
 
@@ -97,6 +128,7 @@ ai-pathfinding-gradio-lab/
 │   ├── test_heuristics.py
 │   └── test_metrics.py
 ├── docs/                             # Weekly learning guides
+│   ├── week_00_python_prerequisites.md
 │   ├── week_01_python_project_setup.md
 │   ├── week_02_grid_model.md
 │   ├── week_03_bfs_dfs.md
@@ -114,6 +146,7 @@ ai-pathfinding-gradio-lab/
 ├── solutions/                        # Exercise solutions
 │   └── week_XX_solutions.md (12 files)
 └── notebooks/                        # Jupyter notebooks
+    ├── 00_python_prerequisites.ipynb
     ├── 01_grid_basics.ipynb
     ├── 02_bfs_dfs.ipynb
     ├── 03_dijkstra_astar.ipynb
@@ -135,6 +168,7 @@ For a start-to-finish explanation of how the app works, read **[docs/END_TO_END_
 **📖 [Complete Learning Roadmap](LEARNING_ROADMAP.md)** - Your comprehensive guide with direct links to all resources!
 
 ### Month 1: Foundations
+- **Week 0** *(optional warm-up)*: [The Python You'll Need](docs/week_00_python_prerequisites.md) — tuples, sets & Big-O, classes, dataclasses, dunders, enums, type hints, `deque`/`heapq`
 - **Week 1**: Python project setup, virtual environments, pytest basics
 - **Week 2**: Grid model, nodes, obstacles, coordinate systems
 - **Week 3**: BFS and DFS algorithms
@@ -152,7 +186,7 @@ For a start-to-finish explanation of how the app works, read **[docs/END_TO_END_
 - **Week 11**: Documentation, testing, and code quality
 - **Week 12**: Final integration, deployment, and reflection
 
-**👉 Start here: [Week 1 Documentation](docs/week_01_python_project_setup.md)**
+**👉 Start here: [Week 1 Documentation](docs/week_01_python_project_setup.md)** *(new to Python data structures? skim [Week 0](docs/week_00_python_prerequisites.md) first)*
 
 ## 🎓 Learning Outcomes
 

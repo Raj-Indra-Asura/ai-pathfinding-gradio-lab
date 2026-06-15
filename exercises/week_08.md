@@ -4,6 +4,30 @@
 
 ---
 
+**🔑 Concepts/links you'll need:** Gradio Blocks/Interface — [quickstart](https://www.gradio.app/guides/quickstart); passing functions as callbacks ([Week 0 §7](../docs/week_00_python_prerequisites.md#prereq-typehints)); `try/except` for input validation ([Week 0 §9](../docs/week_00_python_prerequisites.md#prereq-tryexcept)).
+
+## Warm-up Exercise (Trivial)
+
+### Task: Launch a Two-Line Gradio App
+
+Before wiring up pathfinding, make *any* Gradio app appear in your browser so the toolkit isn't a
+cold open.
+
+```python
+import gradio as gr
+
+def greet(name):
+    return f"Hello, {name}! Gradio is working."
+
+demo = gr.Interface(fn=greet, inputs="text", outputs="text")
+demo.launch()
+```
+
+**You're done when** the app opens at `http://127.0.0.1:7860`, you type a name, and see the
+greeting. Press `Ctrl+C` to stop. *(New to passing a function as `fn`? See [Week 0 §7](../docs/week_00_python_prerequisites.md#prereq-typehints).)*
+
+---
+
 ## Exercise 1: Basic Gradio Interface (Beginner)
 
 **Goal**: Create a simple Gradio interface for a single pathfinding algorithm.

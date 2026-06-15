@@ -4,6 +4,19 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 4** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — Dijkstra, adding movement-cost awareness.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- BFS/DFS from last week — [Week 3](week_03_bfs_dfs.md).
+- `heapq` (priority queue) and `float('inf')` — [Week 0 §8](week_00_python_prerequisites.md#prereq-deque-heapq-inf).
+- Dicts for `cost_so_far`, tuples as keys — [Week 0 §1–§2](week_00_python_prerequisites.md#prereq-tuples).
+- Why a priority queue needs ordering (`__lt__`) — [Week 0 §5](week_00_python_prerequisites.md#prereq-dunder).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will:
@@ -81,6 +94,48 @@ A data structure where elements are removed in order of priority (lowest cost fi
 - Regular queue (BFS): Explores by distance
 - Priority queue (Dijkstra's): Explores by cost
 - This difference makes Dijkstra's optimal for weighted graphs
+
+## Build the Intuition: Why a Node Lands in the Heap Twice
+
+Before reading the code, trace a tiny example **by hand**. Forget grids for a moment and use
+four nodes **S, A, B, G** with these one-way move costs:
+
+```text
+S → A = 4
+S → B = 1
+B → A = 1
+A → G = 1
+```
+
+We track `cost_so_far` (best cost known to reach each node). Every node starts at
+**`float('inf')`**, which simply means **"not reached yet"** — any real cost is smaller, so the
+first real path always wins the comparison `new_cost < cost_so_far[node]`.
+
+| Step | Pop from heap | Action | Heap afterwards | `cost_so_far` |
+| --- | --- | --- | --- | --- |
+| 1 | — (start) | push `(0, S)` | `[(0,S)]` | `S:0` |
+| 2 | `(0, S)` | S→A: `0+4=4` push `(4, A)`; S→B: `0+1=1` push `(1, B)` | `[(1,B), (4,A)]` | `S:0, A:4, B:1` |
+| 3 | `(1, B)` | B→A: `1+1=2` **< 4**, so update A and push `(2, A)` | `[(2,A), (4,A)]` | `S:0, A:2, B:1` |
+| 4 | `(2, A)` | A→G: `2+1=3` push `(3, G)` | `[(3,G), (4,A)]` | `…, A:2, G:3` |
+| 5 | `(3, G)` | G is the goal → done (cost 3) | `[(4,A)]` | — |
+
+Look at step 3: **A is now in the heap twice — once at cost 4, once at cost 2.** That is normal.
+Dijkstra never edits or deletes old heap entries (that would be slow); it just pushes a new,
+cheaper one. The cheaper copy `(2, A)` sits *above* the stale `(4, A)` because the heap always
+keeps the smallest on top.
+
+**Why the skip-check is correct.** Because the heap pops smallest-first, we always pop the
+*cheapest* copy `(2, A)` before the stale `(4, A)`. By the time the stale `(4, A)` would be
+popped, `cost_so_far[A]` is already `2`, so:
+
+```python
+if current_cost > cost_so_far.get(current, float('inf')):
+    continue   # 4 > 2  → skip this stale entry, we already did better
+```
+
+The skip-check throws away outdated entries safely. It can never skip a *useful* entry, because
+the first time we pop a node it carries that node's best possible cost (that is the heart of why
+Dijkstra is optimal). Keep this trace in mind while reading the real code below.
 
 ## Code Walkthrough
 

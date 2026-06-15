@@ -4,11 +4,37 @@
 
 ---
 
+**🔑 Concepts/links you'll need:** `heapq` & `float('inf')` ([Week 0 §8](../docs/week_00_python_prerequisites.md#prereq-deque-heapq-inf)); a heuristic is a `Callable` function ([Week 0 §7](../docs/week_00_python_prerequisites.md#prereq-typehints)); tuples & dicts ([Week 0 §1](../docs/week_00_python_prerequisites.md#prereq-tuples)).
+
 ## Overview
 
 These exercises will help you master A* search with heuristics. You'll implement A* variations, understand admissibility, and compare different heuristic functions.
 
-## Exercise 1: Custom Heuristic Evaluator (Beginner)
+## Warm-up Exercise (Trivial)
+
+### Task: Print a Heuristic Shrinking Toward the Goal
+
+A heuristic is just a function `h(position, goal)` returning a number. Confirm it gets *smaller*
+as you walk toward the goal.
+
+```python
+from pathfinding_lab.heuristics.manhattan import manhattan_distance
+
+goal = (5, 5)
+for pos in [(0, 0), (2, 2), (4, 4), (5, 5)]:
+    print(f"h({pos} -> {goal}) =", manhattan_distance(pos, goal))
+```
+
+**You're done when** you can explain why the values decrease to `0` at the goal, and why this is
+the `h` in `f = g + h`. *(New to reading `Callable` heuristics? See [Week 0 §7](../docs/week_00_python_prerequisites.md#prereq-typehints).)*
+
+---
+
+## Exercise 1: Custom Heuristic Evaluator (Intermediate)
+
+> **Difficulty note:** although it's the first numbered exercise, this task requires running
+> **Dijkstra** (Week 4) to compute true optimal costs and reasoning about **admissibility**, so
+> it's really *intermediate*, not beginner. Do the trivial warm-up above first.
 
 **Goal**: Create a tool that evaluates whether a custom heuristic is admissible.
 

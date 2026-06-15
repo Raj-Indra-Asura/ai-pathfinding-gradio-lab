@@ -4,6 +4,8 @@
 
 ---
 
+**🔑 Concepts/links you'll need:** `collections.deque` ([Week 0 §8](../docs/week_00_python_prerequisites.md#prereq-deque-heapq-inf)); sets for visited checks ([Week 0 §2](../docs/week_00_python_prerequisites.md#prereq-collections)); tuples & unpacking ([Week 0 §1](../docs/week_00_python_prerequisites.md#prereq-tuples)).
+
 ## Overview
 
 These exercises will help you master Breadth-First Search (BFS) and Depth-First Search (DFS) algorithms. You'll implement, test, and analyze both algorithms to understand their differences.

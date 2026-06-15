@@ -4,6 +4,8 @@
 
 ---
 
+**🔑 Concepts/links you'll need:** everything from Weeks 1–11 — [Roadmap](../LEARNING_ROADMAP.md); the full flow — [End-to-End Pipeline](../docs/END_TO_END_PIPELINE.md).
+
 Welcome to the final week! These exercises integrate everything you've learned throughout the course. You'll build integration tests, implement a custom maze generator, optimize performance, and complete a capstone project.
 
 ---

@@ -4,6 +4,19 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 11** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — polish: tests, types, formatting, and quality.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- pytest basics — [pytest docs](https://docs.pytest.org/).
+- Reading & writing type hints (for mypy) — [Week 0 §7](week_00_python_prerequisites.md#prereq-typehints).
+- The public API across `core` / `algorithms` — [Week 1](week_01_python_project_setup.md).
+- Linting & formatting concepts — [Ruff docs](https://docs.astral.sh/ruff/).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will understand:

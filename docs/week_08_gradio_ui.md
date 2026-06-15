@@ -4,6 +4,19 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 8** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — the Gradio interface users actually click.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- Gradio Blocks & components — [Gradio quickstart](https://www.gradio.app/guides/quickstart).
+- Passing functions as callbacks — [Week 0 §7](week_00_python_prerequisites.md#prereq-typehints).
+- `try/except` for input validation — [Week 0 §9](week_00_python_prerequisites.md#prereq-tryexcept).
+- The algorithms & `SearchResult` you'll wire up — [Week 5](week_05_astar.md).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will understand:

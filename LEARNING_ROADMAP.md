@@ -17,8 +17,9 @@ Each week follows this pattern:
 
 **New to the project?** Start here:
 1. Read [README.md](README.md) for project overview
-2. Begin with [Week 1 Documentation](docs/week_01_python_project_setup.md)
-3. Follow the weekly progression below
+2. **Only know basic Python?** Skim [Week 0: The Python You'll Need](docs/week_00_python_prerequisites.md) first — it's a read-once reference you revisit whenever a later week uses a symbol you don't recognize.
+3. Begin with [Week 1 Documentation](docs/week_01_python_project_setup.md)
+4. Follow the weekly progression below
 
 
 ## 🔗 End-to-End Pipeline Guide

@@ -4,6 +4,8 @@
 
 ---
 
+**🔑 Concepts/links you'll need:** `try/except` for input validation ([Week 0 §9](../docs/week_00_python_prerequisites.md#prereq-tryexcept)); reading type hints ([Week 0 §7](../docs/week_00_python_prerequisites.md#prereq-typehints)).
+
 ## Beginner Exercise
 
 ### Task: Verify Your Environment
