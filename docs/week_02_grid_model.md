@@ -4,6 +4,20 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 2** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — the grid model every later layer reads.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- Tuples & the `(row, col)` `Position` convention — [Week 0 §1](week_00_python_prerequisites.md#prereq-tuples).
+- Sets vs lists vs dicts and what "O(1) fast lookup" means — [Week 0 §2](week_00_python_prerequisites.md#prereq-collections).
+- Classes & `self` (enough to read `Grid`) — [Week 0 §3](week_00_python_prerequisites.md#prereq-classes).
+- Enums like `MovementMode` — [Week 0 §6](week_00_python_prerequisites.md#prereq-enums).
+- How to *read* type hints — [Week 0 §7](week_00_python_prerequisites.md#prereq-typehints).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will:

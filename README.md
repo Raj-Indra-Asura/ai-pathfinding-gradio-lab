@@ -128,6 +128,7 @@ ai-pathfinding-gradio-lab/
 │   ├── test_heuristics.py
 │   └── test_metrics.py
 ├── docs/                             # Weekly learning guides
+│   ├── week_00_python_prerequisites.md
 │   ├── week_01_python_project_setup.md
 │   ├── week_02_grid_model.md
 │   ├── week_03_bfs_dfs.md
@@ -145,6 +146,7 @@ ai-pathfinding-gradio-lab/
 ├── solutions/                        # Exercise solutions
 │   └── week_XX_solutions.md (12 files)
 └── notebooks/                        # Jupyter notebooks
+    ├── 00_python_prerequisites.ipynb
     ├── 01_grid_basics.ipynb
     ├── 02_bfs_dfs.ipynb
     ├── 03_dijkstra_astar.ipynb
@@ -166,6 +168,7 @@ For a start-to-finish explanation of how the app works, read **[docs/END_TO_END_
 **📖 [Complete Learning Roadmap](LEARNING_ROADMAP.md)** - Your comprehensive guide with direct links to all resources!
 
 ### Month 1: Foundations
+- **Week 0** *(optional warm-up)*: [The Python You'll Need](docs/week_00_python_prerequisites.md) — tuples, sets & Big-O, classes, dataclasses, dunders, enums, type hints, `deque`/`heapq`
 - **Week 1**: Python project setup, virtual environments, pytest basics
 - **Week 2**: Grid model, nodes, obstacles, coordinate systems
 - **Week 3**: BFS and DFS algorithms
@@ -183,7 +186,7 @@ For a start-to-finish explanation of how the app works, read **[docs/END_TO_END_
 - **Week 11**: Documentation, testing, and code quality
 - **Week 12**: Final integration, deployment, and reflection
 
-**👉 Start here: [Week 1 Documentation](docs/week_01_python_project_setup.md)**
+**👉 Start here: [Week 1 Documentation](docs/week_01_python_project_setup.md)** *(new to Python data structures? skim [Week 0](docs/week_00_python_prerequisites.md) first)*
 
 ## 🎓 Learning Outcomes
 

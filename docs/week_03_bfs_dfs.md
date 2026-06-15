@@ -4,6 +4,19 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 3** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — BFS and DFS, the first search algorithms.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- The grid model and `get_neighbors` — [Week 2](week_02_grid_model.md).
+- Tuples & unpacking — [Week 0 §1](week_00_python_prerequisites.md#prereq-tuples).
+- Sets for O(1) "have I visited this cell?" checks — [Week 0 §2](week_00_python_prerequisites.md#prereq-collections).
+- `collections.deque` (the BFS queue) — [Week 0 §8](week_00_python_prerequisites.md#prereq-deque-heapq-inf).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will:

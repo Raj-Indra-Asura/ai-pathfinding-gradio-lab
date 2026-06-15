@@ -4,6 +4,19 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 12** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — final integration of the whole product.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- Everything from Weeks 1–11 — [Learning Roadmap](../LEARNING_ROADMAP.md).
+- The full request flow — [End-to-End Pipeline](END_TO_END_PIPELINE.md).
+- Running tests and launching the app — [Week 1](week_01_python_project_setup.md).
+- The Gradio app structure — [Week 8](week_08_gradio_ui.md).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will understand:

@@ -4,6 +4,19 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 6** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — the heuristic library A* chooses from.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- A* and the `f = g + h` idea — [Week 5](week_05_astar.md).
+- Heuristics are plain functions over positions — [Week 0 §7](week_00_python_prerequisites.md#prereq-typehints).
+- Tuples & unpacking — [Week 0 §1](week_00_python_prerequisites.md#prereq-tuples).
+- Basic math: `abs`, `sqrt`, `min`/`max` — [Python math module](https://docs.python.org/3/library/math.html).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will understand:

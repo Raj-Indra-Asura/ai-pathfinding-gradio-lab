@@ -4,6 +4,19 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 5** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — A* and Greedy, adding heuristic-guided search.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- Dijkstra and priority queues — [Week 4](week_04_dijkstra.md).
+- `heapq` and `float('inf')` — [Week 0 §8](week_00_python_prerequisites.md#prereq-deque-heapq-inf).
+- Reading `Callable[[Position, Position], float]` (a heuristic is a *function*) — [Week 0 §7](week_00_python_prerequisites.md#prereq-typehints).
+- Tuples & dicts for tracking costs — [Week 0 §1–§2](week_00_python_prerequisites.md#prereq-tuples).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will:

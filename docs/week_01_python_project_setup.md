@@ -4,6 +4,19 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 1** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — a local development environment so tests, imports, and the app all run.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- Basic Python — variables, functions, loops, `if` (assumed for the whole course).
+- Running commands in a terminal and using `pip` / virtual environments — [venv & pip primer](https://realpython.com/python-virtual-environments-a-primer/).
+- What a Python *package* and `import` are — [Week 0 overview](week_00_python_prerequisites.md).
+- `try/except` (used in this week's exercise) — [Week 0 §9](week_00_python_prerequisites.md#prereq-tryexcept).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will:

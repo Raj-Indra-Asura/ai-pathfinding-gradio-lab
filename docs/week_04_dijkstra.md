@@ -4,6 +4,19 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 4** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — Dijkstra, adding movement-cost awareness.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- BFS/DFS from last week — [Week 3](week_03_bfs_dfs.md).
+- `heapq` (priority queue) and `float('inf')` — [Week 0 §8](week_00_python_prerequisites.md#prereq-deque-heapq-inf).
+- Dicts for `cost_so_far`, tuples as keys — [Week 0 §1–§2](week_00_python_prerequisites.md#prereq-tuples).
+- Why a priority queue needs ordering (`__lt__`) — [Week 0 §5](week_00_python_prerequisites.md#prereq-dunder).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will:

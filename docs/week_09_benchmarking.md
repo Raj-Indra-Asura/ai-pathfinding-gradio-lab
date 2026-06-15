@@ -4,6 +4,19 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 9** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — benchmarking that compares algorithms fairly.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- `SearchResult` metric fields (a dataclass) — [Week 0 §4](week_00_python_prerequisites.md#prereq-dataclasses).
+- pandas DataFrame basics — [10 minutes to pandas](https://pandas.pydata.org/docs/user_guide/10min.html).
+- Random seeds for reproducible grids — [Week 2](week_02_grid_model.md).
+- Dicts/lists for aggregating runs — [Week 0 §2](week_00_python_prerequisites.md#prereq-collections).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will understand:

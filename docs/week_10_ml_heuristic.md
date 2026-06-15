@@ -4,6 +4,19 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 10** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — an optional learned (ML) heuristic experiment.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- scikit-learn basics (fit / predict, `train_test_split`, `RandomForestRegressor`) — [scikit-learn getting started](https://scikit-learn.org/stable/getting_started.html).
+- A* + heuristics (what the model replaces) — [Week 5](week_05_astar.md).
+- A heuristic is a *function* (`Callable`) — [Week 0 §7](week_00_python_prerequisites.md#prereq-typehints).
+- What `pickle` does (save/load a model) — [pickle docs](https://docs.python.org/3/library/pickle.html).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will understand:

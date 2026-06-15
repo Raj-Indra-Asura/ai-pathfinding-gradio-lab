@@ -4,6 +4,19 @@
 
 ---
 
+## 📋 Before You Start
+
+> **🧭 Pipeline:** This week adds **box 7** to the [end-to-end pipeline](END_TO_END_PIPELINE.md) — visualization that turns results into plots.
+
+**What you should already know** (each links to where to learn or revisit it):
+
+- A `SearchResult` to plot (`path`, `visited_order`) — [Week 0 §4](week_00_python_prerequisites.md#prereq-dataclasses).
+- matplotlib basics — [Pyplot tutorial](https://matplotlib.org/stable/tutorials/introductory/pyplot.html).
+- numpy arrays (the grid is a 2D array) — [NumPy quickstart](https://numpy.org/doc/stable/user/quickstart.html).
+- Enums like `CellType` for colors — [Week 0 §6](week_00_python_prerequisites.md#prereq-enums).
+
+---
+
 ## Learning Goals
 
 By the end of this week, you will understand:
