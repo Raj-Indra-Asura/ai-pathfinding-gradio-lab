@@ -8,6 +8,14 @@ This directory contains interactive Jupyter notebooks for learning pathfinding a
 
 ## 📚 Notebooks Overview
 
+### [00_python_prerequisites.ipynb](00_python_prerequisites.ipynb)
+**Related to**: [Week 0 - The Python You'll Need](../docs/week_00_python_prerequisites.md)
+- **Topics**: Tuples, sets/lists/dicts & Big-O, classes, dataclasses, dunder methods, enums, type hints, `deque`/`heapq`/`float('inf')`, `try/except`
+- **Level**: Gentle / reference
+- **Duration**: Read once, revisit anytime
+- **Prerequisites**: Basic Python (variables, functions, loops) and basic data structures (lists, dicts)
+- **Key idea**: Teaches the Python you need by pointing at this project's own code. Open it whenever a later week uses a symbol you don't recognize.
+
 ### [01_grid_basics.ipynb](01_grid_basics.ipynb)
 **Related to**: [Week 2 - Grid Model](../docs/week_02_grid_model.md)
 - **Topics**: Grid creation, obstacles, neighbors, coordinate systems
