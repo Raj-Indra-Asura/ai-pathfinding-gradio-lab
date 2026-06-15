@@ -209,6 +209,8 @@ implementation below.
 
 ## Code Walkthrough
 
+### A* Implementation (`src/pathfinding_lab/algorithms/astar.py`)
+
 #### 1. Initialization
 
 ```python

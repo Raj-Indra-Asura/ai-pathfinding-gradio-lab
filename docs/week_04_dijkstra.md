@@ -139,6 +139,8 @@ Dijkstra is optimal). Keep this trace in mind while reading the real code below.
 
 ## Code Walkthrough
 
+### Dijkstra's Implementation (`src/pathfinding_lab/algorithms/dijkstra.py`)
+
 Let's examine the key parts:
 
 #### 1. Initialization
