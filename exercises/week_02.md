@@ -4,6 +4,30 @@
 
 ---
 
+**🔑 Concepts/links you'll need:** tuples & `(row, col)` ([Week 0 §1](../docs/week_00_python_prerequisites.md#prereq-tuples)); sets/dicts & O(1) lookup ([Week 0 §2](../docs/week_00_python_prerequisites.md#prereq-collections)); classes & `self` ([Week 0 §3](../docs/week_00_python_prerequisites.md#prereq-classes)); enums like `MovementMode` ([Week 0 §6](../docs/week_00_python_prerequisites.md#prereq-enums)).
+
+## Warm-up Exercise (Trivial)
+
+### Task: Create a Grid and Look Around
+
+Get comfortable with the `Grid` object before anything harder. Create a small grid, print its
+dimensions, and print the neighbors of one cell.
+
+```python
+from pathfinding_lab.core.grid import Grid
+
+grid = Grid(width=5, height=4)
+print("Dimensions (width x height):", grid.width, "x", grid.height)
+print("Neighbors of (1, 1):", grid.get_neighbors((1, 1)))
+print("Is (0, 0) valid?", grid.is_valid((0, 0)))
+print("Is (9, 9) valid?", grid.is_valid((9, 9)))
+```
+
+**You're done when** you can explain why `(1, 1)` has the number of neighbors it does, and why
+`(9, 9)` is invalid on this grid. *(New to tuples/classes? See [Week 0 §1 & §3](../docs/week_00_python_prerequisites.md#prereq-tuples).)*
+
+---
+
 ## Beginner Exercise
 
 ### Task: Grid Distance Calculator

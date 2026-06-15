@@ -4,6 +4,38 @@
 
 ---
 
+**🔑 Concepts/links you'll need:** scikit-learn (`train_test_split`, `RandomForestRegressor`) — [getting started](https://scikit-learn.org/stable/getting_started.html); a heuristic is a `Callable` ([Week 0 §7](../docs/week_00_python_prerequisites.md#prereq-typehints)); `pickle` to save/load models — [docs](https://docs.python.org/3/library/pickle.html).
+
+## Warm-up Exercise (Trivial)
+
+### Task: See One Training Example (Features → True Distance)
+
+Machine learning trains on `(features → answer)` pairs. Print *one* such pair so the rest of the
+week isn't abstract: the **features** of a cell and the **true** distance Dijkstra computes for it
+(the label the model will try to predict).
+
+```python
+from pathfinding_lab.core.grid import Grid
+from pathfinding_lab.ml.dataset import extract_features
+from pathfinding_lab.algorithms.dijkstra import dijkstra
+
+grid = Grid(15, 15, obstacle_density=0.2, random_seed=42)
+start, goal = (0, 0), (14, 14)
+grid.generate_obstacles(start, goal)
+
+features = extract_features(grid, start, goal)
+true_distance = dijkstra(grid, start, goal).path_cost
+
+print("features (model input):", features)
+print("true distance (label to predict):", round(true_distance, 2))
+```
+
+**You're done when** you can name what each feature roughly measures and explain why the true
+distance is the "answer" the model is trying to learn. *(Unsure what *feature*, *training set*, or
+*R²* mean? Re-read the primer at the top of [Week 10 docs](../docs/week_10_ml_heuristic.md).)*
+
+---
+
 ## Exercise 1: Generate Training Data (Beginner)
 
 **Goal**: Create a dataset of pathfinding problems with ground truth distances for training machine learning models.

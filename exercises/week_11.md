@@ -4,6 +4,8 @@
 
 ---
 
+**🔑 Concepts/links you'll need:** pytest — [docs](https://docs.pytest.org/); reading & writing type hints ([Week 0 §7](../docs/week_00_python_prerequisites.md#prereq-typehints)); Ruff for linting — [docs](https://docs.astral.sh/ruff/).
+
 This week focuses on professional software development practices: writing comprehensive tests, documenting code properly, and using quality assurance tools.
 
 ## Exercise 1: Write Edge Case Tests (Beginner)

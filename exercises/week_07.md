@@ -4,6 +4,8 @@
 
 ---
 
+**🔑 Concepts/links you'll need:** `SearchResult` fields (a dataclass) ([Week 0 §4](../docs/week_00_python_prerequisites.md#prereq-dataclasses)); matplotlib — [Pyplot tutorial](https://matplotlib.org/stable/tutorials/introductory/pyplot.html); numpy — [quickstart](https://numpy.org/doc/stable/user/quickstart.html).
+
 ## Beginner Exercise: Custom Color Scheme Visualizer
 
 ### Task
